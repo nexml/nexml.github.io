@@ -37,7 +37,7 @@ $logger->debug("hostname is $hostname");
 
 # subtree for this part of the site structure, i.e.
 # the schema documentation
-my $subtree = $ENV{'STATIC_ROOT'} . '/doc/schema-1';
+my $subtree = '/doc/schema-1';
 $logger->debug("subtree is $subtree");
 
 # $prefix is the path to docroot, so on server-side
@@ -50,7 +50,7 @@ $logger->debug("prefix is $prefix");
 # $include is used to find server side includes, e.g.
 # when we embed javascript or css directly into a page.
 # on the client side we need to strip $prefix of it.
-my $include = $prefix . '/nexml/html/include';
+my $include = $prefix . '/templates';
 $logger->debug("include is $include");
 
 # the root file of the schema, i.e. nexml.xsd

@@ -1,0 +1,3 @@
+[submodule "nexml"]
+	path = nexml
+	url = https://github.com/nexml/nexml.git
