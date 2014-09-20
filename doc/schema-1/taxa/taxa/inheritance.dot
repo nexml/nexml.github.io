@@ -1,0 +1,20 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/taxa/taxa.xsd upwards. Graph generated on Sat Sep 20 23:48:15 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/taxa/taxa.xsd";
+                                                                Taxa [URL="/doc/schema-1/taxa/taxa/#Taxa",shape=box];        
+                                                                        IDTagged -> Taxa [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                Taxon [URL="/doc/schema-1/taxa/taxa/#Taxon",shape=box];        
+                                                                        IDTagged -> Taxon [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                }
+
+

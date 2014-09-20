@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Overview</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1 -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                schema-1                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain typeList"><a name="intro"></a>NeXML 0.9 schema documentation</h3>
+<p>
+    <strong>On this page:</strong>
+    <a href="#roadmap">Documentation roadmap</a> |     
+    <a href="#complex">Complex type index</a> |
+    <a href="#simple">Simple type index</a> |
+   	<a href="#discussion">Schema design discussion</a>
+</p>
+
+<h3 class="headerstyle typeList"><a name="roadmap"></a>Documentation roadmap</h3>
+<p>
+	This is the starting page for the autogenerated schema documentation.
+    Each page of the documentation describes the types from a single schema
+    file, which form a logical unit - such as all types that have to do with DNA.
+    At the top of the page is a brief description taken from the root 
+    &lt;xs:annotation/&gt; element of the schema file. This section closes with
+    three icon links, which open in a separate window:
+</p>    
+<p class="level1">
+    <img 
+        class="icon" 
+        src="/img/chart_organisation.png" 
+        alt="organisation chart" />
+    &mdash; links to a graph of the inheritance tree of the complex types on the 
+    page, recursing up to the root class (which might be on a different page). 
+    Abstract types are shown in grey, concrete types in black. Inheritance by
+    extension in blue, by restriction in red. The graph is a clickable image map.
+</p>
+<p class="level1">
+    <img 
+        class="icon" 
+        src="/img/sitemap.png"
+        alt="file hierarchy" />
+    &mdash; links to a graph of file inclusions: xml schema files can include
+    other files, and these inclusions are displayed here (with the file 
+    described on the page shown in black). The graph is a clickable image map.
+</p>    
+<p class="level1">
+    <img 
+        class="icon" 
+        src="/img/page_white_code_red.png"
+        alt="xml schema code" />
+    &mdash; links to the xml schema source of the described file.
+</p>
+<p>
+    The remainder of the page consists of type definitions, with for each type:
+</p>
+<h5 class="level1">Description</h5>
+<p class="level1">    
+    A brief description of the type.
+</p>
+<h5 class="level1">Inheritance</h5>
+<p class="level1">    
+    Describes how the type is derived
+    (extension or restriction). Links to the parent class of the type, and
+    child classes (if any).
+</p>
+<h5 class="level1">Attributes</h5>
+<p class="level1">        
+    Lists the attributes that may occur on
+    element instances of the type; their name, data type of the value, and
+    their usage (required/optional/forbidden). Only applies to complex types.
+</p>
+<h5 class="level1">Facets</h5> 
+<p class="level1"> 
+    Lists constraining facets. For example, 
+    a regular expression that a string must match, or the lower and upper bounds
+    for a number. Only applies to simple types.
+</p>
+<h5 class="level1">Substructures</h5> 
+<p class="level1">     
+    Lists the immediate child elements,
+    sequences and choices.
+</p>
+<h5 class="level1">Definition source</h5>
+<p class="level1"> 
+    The raw code of the type definition.
+</p>
+<p class="internallink">[ <a href="#top">Back to top</a> ]</p> 
+<h3 class="headerstyle typeList"><a name="complex"></a>Complex type index</h3>
+                        <ul class="typeList">        
+                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAFormat">
+                            AAFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAMapping">
+                            AAMapping                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAMatrixObsRow">
+                            AAMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAMatrixSeqRow">
+                            AAMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAObs">
+                            AAObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAObsMatrix">
+                            AAObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAPolymorphicStateSet">
+                            AAPolymorphicStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AASeqMatrix">
+                            AASeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAState">
+                            AAState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAStates">
+                            AAStates                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAUncertainStateSet">
+                            AAUncertainStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractBlock">
+                            AbstractBlock                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractCells">
+                            AbstractCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractChar">
+                            AbstractChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractEdge">
+                            AbstractEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractFormat">
+                            AbstractFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractMapping">
+                            AbstractMapping                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractNetwork">
+                            AbstractNetwork                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractNode">
+                            AbstractNode                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObs">
+                            AbstractObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix">
+                            AbstractObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow">
+                            AbstractObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet">
+                            AbstractPolymorphicStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractRootEdge">
+                            AbstractRootEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix">
+                            AbstractSeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow">
+                            AbstractSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs">
+                            AbstractSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#AbstractSet">
+                            AbstractSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractState">
+                            AbstractState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractStates">
+                            AbstractStates                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractTree">
+                            AbstractTree                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/abstracttrees/#AbstractTrees">
+                            AbstractTrees                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">
+                            AbstractUncertainStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#Annotated">
+                            Annotated                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/annotations/#Base">
+                            Base                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#CellSet">
+                            CellSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#CharSet">
+                            CharSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousCells">
+                            ContinuousCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousChar">
+                            ContinuousChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousFormat">
+                            ContinuousFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousMatrixObsRow">
+                            ContinuousMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousMatrixSeqRow">
+                            ContinuousMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousObs">
+                            ContinuousObs                        </a>            
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                <ul class="typeList">        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousObsMatrix">
+                            ContinuousObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousSeqMatrix">
+                            ContinuousSeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousSeqs">
+                            ContinuousSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAChar">
+                            DNAChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAFormat">
+                            DNAFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAMapping">
+                            DNAMapping                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAMatrixObsRow">
+                            DNAMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAMatrixSeqRow">
+                            DNAMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAObs">
+                            DNAObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAObsMatrix">
+                            DNAObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAPolymorphicStateSet">
+                            DNAPolymorphicStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNASeqMatrix">
+                            DNASeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAState">
+                            DNAState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAStates">
+                            DNAStates                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAUncertainStateSet">
+                            DNAUncertainStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DnaCells">
+                            DnaCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DnaSeqs">
+                            DnaSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/network/#FloatNetwork">
+                            FloatNetwork                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#FloatTree">
+                            FloatTree                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#IDTagged">
+                            IDTagged                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/network/#IntNetwork">
+                            IntNetwork                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#IntTree">
+                            IntTree                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#Labelled">
+                            Labelled                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/annotations/#LiteralMeta">
+                            LiteralMeta                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/annotations/#Meta">
+                            Meta                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/network/#NetworkFloatEdge">
+                            NetworkFloatEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/network/#NetworkIntEdge">
+                            NetworkIntEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/network/#NetworkNode">
+                            NetworkNode                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/nexml/#Nexml">
+                            Nexml                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#NodeAndRootEdgeAndEdgeSet">
+                            NodeAndRootEdgeAndEdgeSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#OptionalTaxonLinked">
+                            OptionalTaxonLinked                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#ProteinCells">
+                            ProteinCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#ProteinSeqs">
+                            ProteinSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAChar">
+                            RNAChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAFormat">
+                            RNAFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAMapping">
+                            RNAMapping                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAMatrixObsRow">
+                            RNAMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAMatrixSeqRow">
+                            RNAMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAObs">
+                            RNAObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAObsMatrix">
+                            RNAObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAPolymorphicStateSet">
+                            RNAPolymorphicStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNASeqMatrix">
+                            RNASeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAState">
+                            RNAState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAStates">
+                            RNAStates                        </a>            
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                <ul class="typeList">        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAUncertainStateSet">
+                            RNAUncertainStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/annotations/#ResourceMeta">
+                            ResourceMeta                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionCells">
+                            RestrictionCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionChar">
+                            RestrictionChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionFormat">
+                            RestrictionFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionMatrixObsRow">
+                            RestrictionMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionMatrixSeqRow">
+                            RestrictionMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionObs">
+                            RestrictionObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionObsMatrix">
+                            RestrictionObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionSeqMatrix">
+                            RestrictionSeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionSeqs">
+                            RestrictionSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionState">
+                            RestrictionState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionStates">
+                            RestrictionStates                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RnaCells">
+                            RnaCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RnaSeqs">
+                            RnaSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#RowSet">
+                            RowSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardCells">
+                            StandardCells                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardChar">
+                            StandardChar                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardFormat">
+                            StandardFormat                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardMapping">
+                            StandardMapping                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardMatrixObsRow">
+                            StandardMatrixObsRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardMatrixSeqRow">
+                            StandardMatrixSeqRow                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardObs">
+                            StandardObs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardObsMatrix">
+                            StandardObsMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardPolymorphicStateSet">
+                            StandardPolymorphicStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardSeqMatrix">
+                            StandardSeqMatrix                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardSeqs">
+                            StandardSeqs                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardState">
+                            StandardState                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardStates">
+                            StandardStates                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardUncertainStateSet">
+                            StandardUncertainStateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#StateSet">
+                            StateSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/taxa/taxa/#Taxa">
+                            Taxa                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#TaxaLinked">
+                            TaxaLinked                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/taxa/taxa/#Taxon">
+                            Taxon                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/abstract/#TaxonLinked">
+                            TaxonLinked                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#TaxonSet">
+                            TaxonSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/meta/sets/#TreeAndNetworkSet">
+                            TreeAndNetworkSet                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#TreeFloatEdge">
+                            TreeFloatEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#TreeFloatRootEdge">
+                            TreeFloatRootEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#TreeIntEdge">
+                            TreeIntEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#TreeIntRootEdge">
+                            TreeIntRootEdge                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/tree/#TreeNode">
+                            TreeNode                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/trees/trees/#Trees">
+                            Trees                        </a>            
+                    </li>
+                                                        </ul>
+<p class="internallink typeList">[ <a href="#top">Back to top</a> ]</p> 
+<h3 class="headerstyle typeList"><a name="simple"></a>Simple type index</h3>
+                        <ul class="typeList">        
+                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/protein/#AAToken">
+                            AAToken                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeq">
+                            AbstractSeq                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSymbol">
+                            AbstractSymbol                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#AbstractTokenList">
+                            AbstractTokenList                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#CodonPosition">
+                            CodonPosition                        </a>            
+                    </li>
+                                                                                                                                                                                                                                                                                                        </ul>
+                <ul class="typeList">        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/continuous/#ContinuousToken">
+                            ContinuousToken                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNASeq">
+                            DNASeq                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/dna/#DNAToken">
+                            DNAToken                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/abstractcharacters/#MSTokenLength">
+                            MSTokenLength                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/nexml/#Nexml1_0">
+                            Nexml1_0                        </a>            
+                    </li>
+                                                                                                                                                                                </ul>
+                <ul class="typeList">        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="typeList">
+                        <a href="/doc/schema-1/characters/rna/#RNAToken">
+                            RNAToken                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionSeq">
+                            RestrictionSeq                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/restriction/#RestrictionToken">
+                            RestrictionToken                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardSeq">
+                            StandardSeq                        </a>            
+                    </li>
+                                                                                                                        <li class="typeList">
+                        <a href="/doc/schema-1/characters/standard/#StandardToken">
+                            StandardToken                        </a>            
+                    </li>
+                                                        </ul>
+<p class="internallink typeList">[ <a href="#top">Back to top</a> ]</p> 
+
+
+<h3 class="headerstyle typeList"><a name="discussion"></a>Schema design discussion</h3>
+<p>
+    The design of the nexml schema is guided by a handful of simple principles.
+    Having some understanding of what these are will help you make the most of
+    the documentation. You will want to find out how inheritance is used in the
+    schema and how to traverse the inheritance tree, how nexml elements are
+    nested, and how the schema is modularized into files. By reading this section, 
+    you will learn the organization of the schema files and the type definitions 
+    in them so you will be able to find what you need quickly.
+</p>
+<p>
+    <img style="float:right; margin-left: 1em" src="http://farm1.static.flickr.com/153/434873145_1a1ba5c0e7_m.jpg" alt="A photo of a Russian Doll" />
+    <strong>Babushka</strong> &mdash; Xml schemas generally are designed following 
+    one of three patterns. If you sit down and design a schema for a rigid 
+    format where things only ever have one place, you might start by writing the 
+    type definition of the root element. Inside that type definition you would 
+    define which child elements are allowed, and inside them you would define their 
+    children and so on. 
+</p>    
+<p>    
+    The end result would be a schema that mirrors the 
+    instance documents you had in mind - one big nested structure. This is 
+    known as the "Russian Doll" pattern. The downside of this approach is that you 
+    can't break your schema down into different files or reuse type definitions so it
+    is not a very practical approach for large schemas. This is <em>not</em> 
+    how nexml is designed.
+</p>
+<p>
+    <img style="float:left; margin-right: 1em" src="http://farm1.static.flickr.com/68/202460831_7eff36af23_m.jpg" alt="A photo of a Baloney sandwich" />
+    <strong>Bologna</strong> &mdash; The second approach is the very opposite of 
+    the first. You might take this approach if what you are building is a loosely 
+    coupled collection of snippets, for example because each of them is a type of 
+    small message you send to a web service. Following this design you would write 
+    your schema as a library of type definitions and elements. 
+</p>    
+<p>     
+    Although this is useful for messaging protocols and the like, it's not very 
+    practical for complex structured data because every type can be the root element 
+    and there isn't an obvious superstructure. Phylogenetic data like that 
+    contained in NEXUS files consists of blocks of fundamentally different types that
+    relate to each other in different ways. To make sense of these relationships
+    and process and query them efficiently things need to be in predictable locations 
+    within documents (or streams, records, or messages). The nexml schema is therefore
+    also <em>not</em> designed following this "Salami Slice" pattern.
+</p>
+<p>
+    <img style="float:right; margin-left: 1em" src="http://farm1.static.flickr.com/128/407906927_ebb76cc2b6_m.jpg" alt="A photo of Venetian blinds" />
+    <strong>Venice</strong> &mdash; The third approach is an intermediate of the 
+    two. Types are defined as a library of snippets just like the Salami Slice 
+    pattern and exist as reusable, named, things - but they indicate what other 
+    named types their immediate children can be. 
+</p>    
+<p>    
+    Taken as a whole, such a design has a superstructure where one type slides 
+    into another, and that into another, like the lattices in blinds: the "Venetian 
+    Blinds" pattern, which is how nexml is designed. The basic units in the nexml
+    schema are <a href="http://www.w3.org/TR/xmlschema-1/#Complex_Type_Definitions">complexType</a>
+    definitions. These definitions consist of a clump of
+    <a href="http://www.w3.org/TR/xmlschema-1/#cElement_Declarations">element
+    declarations</a> (the allowed children within the type) and
+    <a href="http://www.w3.org/TR/xmlschema-1/#cAttribute_Declarations">attribute
+    declarations</a> which jointly define the structure of an element that is
+    an instance of that complexType. Elsewhere, this type definition is then used
+    to specify allowed named instances of it in other type definitions.
+</p>
+<p>
+    <strong>has-a</strong> &mdash; Assuming a finite non-recursive 
+    set of these definitions there must be a "top lattice" - the 
+    <a href="/doc/schema-1/nexml/#Nexml"><em>Nexml 
+    complexType</em></a>. Starting from this top level type 
+    we can then navigate the schema by traversing the path of types allowed
+    within other types. The way the documentation shows this is by listing,
+    where applicable, the immediate substructures of the complex type. For
+    example, the Nexml type allows one or more child elements of type Taxa,
+    which in instance documents are implemented by elements called "otus".
+    If we follow the link to the Taxa complex type we can have a look at what
+    child elements are allowed in the "otus" element and follow the links to
+    their type definitions and so on.
+</p>
+<p>
+    <strong>is-a</strong> &mdash; Because the nexml schema is 
+    designed in a modular way with named types, their type definitions can be
+    reused and extended to derive other types. This is done extensively in the
+    schema, and you can explore this inheritance tree by following the links
+    in the <em>Inheritance</em> subsection of each type definition, which 
+    specifies what superclass the type was derived from (and how, namely through
+    restriction or extension) and what other types derive from this type.   
+</p>
+<p class="internallink">[ <a href="#top">Back to top</a> ]</p>   
+      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

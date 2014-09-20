@@ -1,0 +1,16 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/meta/annotations.xsd upwards. Graph generated on Sat Sep 20 23:48:15 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/meta/annotations.xsd";
+                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                    LiteralMeta [URL="/doc/schema-1/meta/annotations/#LiteralMeta",shape=box];        
+                                                                        Meta -> LiteralMeta [color=blue];
+                                                                                Meta [URL="/doc/schema-1/meta/annotations/#Meta",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Meta [color=blue];
+                                                                                                                                                                                                                                                                                                    ResourceMeta [URL="/doc/schema-1/meta/annotations/#ResourceMeta",shape=box];        
+                                                                        Meta -> ResourceMeta [color=blue];
+                                                                                                                                                                                        }
+
+

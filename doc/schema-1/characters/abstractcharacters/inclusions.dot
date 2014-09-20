@@ -1,0 +1,58 @@
+/*
+    this graphviz graph documents the nexml file inclusion tree
+    (with focus on /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/abstractcharacters.xsd). Graph generated on Sat Sep 20 23:48:13 2014    from template: $Id: dotinheritance.tmpl 221 2007-12-13 02:31:30Z rvos $    
+*/
+digraph inclusions {
+    label="File inclusion tree";
+                                "~/nexml/xsd/abstract.xsd" [URL="/doc/schema-1/abstract/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/meta/annotations.xsd" -> "~/nexml/xsd/abstract.xsd";
+                                        "~/nexml/xsd/characters/abstractcharacters.xsd" [URL="/doc/schema-1/characters/abstractcharacters/",shape=box];
+                            "~/nexml/xsd/abstract.xsd" -> "~/nexml/xsd/characters/abstractcharacters.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/abstractcharacters.xsd";
+                                        "~/nexml/xsd/characters/characters.xsd" [URL="/doc/schema-1/characters/characters/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/continuous.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                    "~/nexml/xsd/characters/dna.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                    "~/nexml/xsd/characters/protein.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                    "~/nexml/xsd/characters/restriction.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                    "~/nexml/xsd/characters/rna.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                    "~/nexml/xsd/characters/standard.xsd" -> "~/nexml/xsd/characters/characters.xsd";
+                                        "~/nexml/xsd/characters/continuous.xsd" [URL="/doc/schema-1/characters/continuous/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/continuous.xsd";
+                                        "~/nexml/xsd/characters/dna.xsd" [URL="/doc/schema-1/characters/dna/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/dna.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/dna.xsd";
+                                        "~/nexml/xsd/characters/protein.xsd" [URL="/doc/schema-1/characters/protein/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/protein.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/protein.xsd";
+                                        "~/nexml/xsd/characters/restriction.xsd" [URL="/doc/schema-1/characters/restriction/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/restriction.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/restriction.xsd";
+                                        "~/nexml/xsd/characters/rna.xsd" [URL="/doc/schema-1/characters/rna/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/rna.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/rna.xsd";
+                                        "~/nexml/xsd/characters/standard.xsd" [URL="/doc/schema-1/characters/standard/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/characters/abstractcharacters.xsd" -> "~/nexml/xsd/characters/standard.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/characters/standard.xsd";
+                                        "~/nexml/xsd/meta/annotations.xsd" [URL="/doc/schema-1/meta/annotations/",shape=box,color=lightgrey,style=filled];        
+                                                "~/nexml/xsd/meta/sets.xsd" [URL="/doc/schema-1/meta/sets/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/abstract.xsd" -> "~/nexml/xsd/meta/sets.xsd";
+                                        "~/nexml/xsd/nexml.xsd" [URL="/doc/schema-1/nexml/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/taxa/taxa.xsd" -> "~/nexml/xsd/nexml.xsd";
+                    "~/nexml/xsd/characters/characters.xsd" -> "~/nexml/xsd/nexml.xsd";
+                    "~/nexml/xsd/trees/trees.xsd" -> "~/nexml/xsd/nexml.xsd";
+                    "~/nexml/xsd/meta/annotations.xsd" -> "~/nexml/xsd/nexml.xsd";
+                                        "~/nexml/xsd/taxa/taxa.xsd" [URL="/doc/schema-1/taxa/taxa/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/abstract.xsd" -> "~/nexml/xsd/taxa/taxa.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/taxa/taxa.xsd";
+                                        "~/nexml/xsd/trees/abstracttrees.xsd" [URL="/doc/schema-1/trees/abstracttrees/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/abstract.xsd" -> "~/nexml/xsd/trees/abstracttrees.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/trees/abstracttrees.xsd";
+                                        "~/nexml/xsd/trees/network.xsd" [URL="/doc/schema-1/trees/network/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/trees/abstracttrees.xsd" -> "~/nexml/xsd/trees/network.xsd";
+                                        "~/nexml/xsd/trees/tree.xsd" [URL="/doc/schema-1/trees/tree/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/trees/abstracttrees.xsd" -> "~/nexml/xsd/trees/tree.xsd";
+                                        "~/nexml/xsd/trees/trees.xsd" [URL="/doc/schema-1/trees/trees/",shape=box,color=lightgrey,style=filled];        
+                            "~/nexml/xsd/trees/tree.xsd" -> "~/nexml/xsd/trees/trees.xsd";
+                    "~/nexml/xsd/trees/network.xsd" -> "~/nexml/xsd/trees/trees.xsd";
+                    "~/nexml/xsd/meta/sets.xsd" -> "~/nexml/xsd/trees/trees.xsd";
+            }

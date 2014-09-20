@@ -1,0 +1,78 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/protein.xsd upwards. Graph generated on Sat Sep 20 23:48:14 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/characters/protein.xsd";
+                                                                AAChar [URL="/doc/schema-1/characters/protein/#AAChar",shape=box];        
+                                                                        AbstractChar -> AAChar [color=red];
+                                                                                AbstractChar [URL="/doc/schema-1/characters/abstractcharacters/#AbstractChar",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractChar [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                AAFormat [URL="/doc/schema-1/characters/protein/#AAFormat",shape=box];        
+                                                                        AbstractFormat -> AAFormat [color=red];
+                                                                                AbstractFormat [URL="/doc/schema-1/characters/abstractcharacters/#AbstractFormat",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractFormat [color=blue];
+                                                                                                                                                                                                                                            AAMapping [URL="/doc/schema-1/characters/protein/#AAMapping",shape=box];        
+                                                                        AbstractMapping -> AAMapping [color=red];
+                                                                                AbstractMapping [URL="/doc/schema-1/characters/abstractcharacters/#AbstractMapping",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> AbstractMapping [color=blue];
+                                                                                                                                                AAMatrixObsRow [URL="/doc/schema-1/characters/protein/#AAMatrixObsRow",shape=box];        
+                                                                        AbstractObsRow -> AAMatrixObsRow [color=red];
+                                                                                AbstractObsRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractObsRow [color=blue];
+                                                                                TaxonLinked [URL="/doc/schema-1/abstract/#TaxonLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxonLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AAMatrixSeqRow [URL="/doc/schema-1/characters/protein/#AAMatrixSeqRow",shape=box];        
+                                                                        AbstractSeqRow -> AAMatrixSeqRow [color=red];
+                                                                                AbstractSeqRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractSeqRow [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                AAObs [URL="/doc/schema-1/characters/protein/#AAObs",shape=box];        
+                                                                        AbstractObs -> AAObs [color=red];
+                                                                                AbstractObs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObs",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> AbstractObs [color=blue];
+                                                                                                                                                                                                                                                                                                                                        AAObsMatrix [URL="/doc/schema-1/characters/protein/#AAObsMatrix",shape=box];        
+                                                                        AbstractObsMatrix -> AAObsMatrix [color=red];
+                                                                                AbstractObsMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractObsMatrix [color=blue];
+                                                                                                                                                                                                                                            AAPolymorphicStateSet [URL="/doc/schema-1/characters/protein/#AAPolymorphicStateSet",shape=box];        
+                                                                        AbstractPolymorphicStateSet -> AAPolymorphicStateSet [color=red];
+                                                                                AbstractPolymorphicStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractUncertainStateSet -> AbstractPolymorphicStateSet [color=blue];
+                                                                                AbstractUncertainStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractState -> AbstractUncertainStateSet [color=blue];
+                                                                                AbstractState [URL="/doc/schema-1/characters/abstractcharacters/#AbstractState",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractState [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AASeqMatrix [URL="/doc/schema-1/characters/protein/#AASeqMatrix",shape=box];        
+                                                                        AbstractSeqMatrix -> AASeqMatrix [color=red];
+                                                                                AbstractSeqMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractSeqMatrix [color=blue];
+                                                                                                                                                                                                                                            AAState [URL="/doc/schema-1/characters/protein/#AAState",shape=box];        
+                                                                        AbstractState -> AAState [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                AAStates [URL="/doc/schema-1/characters/protein/#AAStates",shape=box];        
+                                                                        AbstractStates -> AAStates [color=red];
+                                                                                AbstractStates [URL="/doc/schema-1/characters/abstractcharacters/#AbstractStates",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractStates [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AAUncertainStateSet [URL="/doc/schema-1/characters/protein/#AAUncertainStateSet",shape=box];        
+                                                                        AbstractUncertainStateSet -> AAUncertainStateSet [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ProteinCells [URL="/doc/schema-1/characters/protein/#ProteinCells",shape=box];        
+                                                                        AbstractCells -> ProteinCells [color=red];
+                                                                                AbstractCells [URL="/doc/schema-1/characters/abstractcharacters/#AbstractCells",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractCells [color=blue];
+                                                                                AbstractBlock [URL="/doc/schema-1/characters/abstractcharacters/#AbstractBlock",shape=box,color=lightgrey,style=filled];
+                                                                                TaxaLinked -> AbstractBlock [color=blue];
+                                                                                TaxaLinked [URL="/doc/schema-1/abstract/#TaxaLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxaLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    ProteinSeqs [URL="/doc/schema-1/characters/protein/#ProteinSeqs",shape=box];        
+                                                                        AbstractSeqs -> ProteinSeqs [color=red];
+                                                                                AbstractSeqs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractSeqs [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+

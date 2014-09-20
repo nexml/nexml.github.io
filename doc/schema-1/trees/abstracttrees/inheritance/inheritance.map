@@ -1,0 +1,12 @@
+base referer
+rect /doc/schema-1/trees/abstracttrees/#AbstractEdge 5,389 128,437
+rect /doc/schema-1/abstract/#IDTagged 468,293 564,341
+rect /doc/schema-1/trees/abstracttrees/#AbstractNetwork 152,389 302,437
+rect /doc/schema-1/abstract/#OptionalTaxonLinked 326,389 512,437
+rect /doc/schema-1/trees/abstracttrees/#AbstractRootEdge 535,389 694,437
+rect /doc/schema-1/trees/abstracttrees/#AbstractTree 718,389 837,437
+rect /doc/schema-1/trees/abstracttrees/#AbstractTrees 860,389 985,437
+rect /doc/schema-1/abstract/#Labelled 473,197 559,245
+rect /doc/schema-1/abstract/#Annotated 467,101 566,149
+rect /doc/schema-1/meta/annotations/#Base 480,5 552,53
+rect /doc/schema-1/trees/abstracttrees/#AbstractNode 356,485 481,533

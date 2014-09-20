@@ -1,0 +1,13 @@
+base referer
+rect /doc/schema-1/meta/sets/#AbstractSet 484,389 592,437
+rect /doc/schema-1/meta/sets/#CellSet 5,485 82,533
+rect /doc/schema-1/meta/sets/#CharSet 105,485 187,533
+rect /doc/schema-1/meta/sets/#NodeAndRootEdgeAndEdgeSet 211,485 474,533
+rect /doc/schema-1/meta/sets/#RowSet 498,485 578,533
+rect /doc/schema-1/meta/sets/#StateSet 602,485 685,533
+rect /doc/schema-1/meta/sets/#TaxonSet 708,485 800,533
+rect /doc/schema-1/meta/sets/#TreeAndNetworkSet 823,485 1000,533
+rect /doc/schema-1/abstract/#IDTagged 490,293 586,341
+rect /doc/schema-1/abstract/#Labelled 495,197 581,245
+rect /doc/schema-1/abstract/#Annotated 489,101 588,149
+rect /doc/schema-1/meta/annotations/#Base 502,5 574,53

@@ -1,0 +1,34 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/trees/network.xsd upwards. Graph generated on Sat Sep 20 23:48:16 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/trees/network.xsd";
+                                                                FloatNetwork [URL="/doc/schema-1/trees/network/#FloatNetwork",shape=box];        
+                                                                        AbstractNetwork -> FloatNetwork [color=red];
+                                                                                AbstractNetwork [URL="/doc/schema-1/trees/abstracttrees/#AbstractNetwork",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractNetwork [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                IntNetwork [URL="/doc/schema-1/trees/network/#IntNetwork",shape=box];        
+                                                                        AbstractNetwork -> IntNetwork [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                NetworkFloatEdge [URL="/doc/schema-1/trees/network/#NetworkFloatEdge",shape=box];        
+                                                                        AbstractEdge -> NetworkFloatEdge [color=red];
+                                                                                AbstractEdge [URL="/doc/schema-1/trees/abstracttrees/#AbstractEdge",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractEdge [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    NetworkIntEdge [URL="/doc/schema-1/trees/network/#NetworkIntEdge",shape=box];        
+                                                                        AbstractEdge -> NetworkIntEdge [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                NetworkNode [URL="/doc/schema-1/trees/network/#NetworkNode",shape=box];        
+                                                                        AbstractNode -> NetworkNode [color=red];
+                                                                                AbstractNode [URL="/doc/schema-1/trees/abstracttrees/#AbstractNode",shape=box,color=lightgrey,style=filled];
+                                                                                OptionalTaxonLinked -> AbstractNode [color=blue];
+                                                                                OptionalTaxonLinked [URL="/doc/schema-1/abstract/#OptionalTaxonLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> OptionalTaxonLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                }
+
+

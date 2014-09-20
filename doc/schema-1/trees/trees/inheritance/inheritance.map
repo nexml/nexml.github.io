@@ -1,0 +1,7 @@
+base referer
+rect /doc/schema-1/trees/trees/#Trees 222,485 294,533
+rect /doc/schema-1/abstract/#TaxaLinked 203,389 313,437
+rect /doc/schema-1/abstract/#IDTagged 210,293 306,341
+rect /doc/schema-1/abstract/#Labelled 215,197 302,245
+rect /doc/schema-1/abstract/#Annotated 209,101 308,149
+rect /doc/schema-1/meta/annotations/#Base 222,5 294,53

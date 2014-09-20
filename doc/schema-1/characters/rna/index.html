@@ -1,0 +1,1219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0 ~/nexml/xsd/characters/rna.xsd</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0 ~/nexml/xsd/characters/rna.xsd</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Schema module documentation</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1/characters/rna/ -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                <a href="/doc/schema-1">schema-1</a> /
+                                                                                <a href="/doc/schema-1/characters">characters</a> /
+                                                                                rna                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1/characters/rna/">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1/characters/rna/">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1/characters/rna/">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1/characters/rna/">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain">Description</h3>
+    <p>
+            This module defines concrete subclasses for the 
+            <a href="../abstract">abstract</a> character matrix components 
+            that all character matrices must implement. The subclasses
+            defined here apply to RNA character data. In a verbose notation, 
+            this data is represented as the "state" attribute which references
+            an explicit state definition. In a compact notation, the same data 
+            is represented as a sequence of tokens (whitespace is allowed but has no meaning).
+        </p><p><strong>Other views</strong> (open in new window):</p>
+<div class="credit linkshare">
+    <a href="inheritance/" target="nexml_inheritance">
+        <img 
+            class="icon" 
+            src="/img/chart_organisation.png" 
+            alt="organisation chart" /> inheritance tree
+    </a> |
+    <a href="inclusions/" target="nexml_inclusions">
+        <img 
+            class="icon" 
+            src="/img/sitemap.png" 
+            alt="file hierarchy" /> inclusions tree
+    </a> |    
+    <a href="/nexml/xsd/characters/rna.xsd" target="nexml_source">
+        <img 
+            class="icon" 
+            src="/img/page_white_code_red.png" 
+            alt="xml schema code" /> schema source
+    </a>     
+</div>
+    <h3 class="headerstyle"><a name="complexTypes"></a>Complex types</h3>
+    
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAChar" class="dataType level1">
+    <a name="RNAChar"></a>RNAChar    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAChar">Description</h5>    
+    <p class="level2 RNAChar"> 
+                A concrete implementation of the AbstractChar element, i.e. a single column in an alignment.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAChar">Inheritance</h5>
+            <p class="level2 RNAChar">
+            RNAChar restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractChar">AbstractChar</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 RNAChar">Attributes</h5>
+            <table class="level2 RNAChar">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>tokens</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#MSTokenLength">
+                                        MSTokenLength                                    </a>
+                                                            </td>
+                            <td>prohibited</td>
+                        </tr>
+                                            <tr>
+                            <td>states</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>codon</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#CodonPosition">
+                                        CodonPosition                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                            <tr>
+                            <td>id</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#ID"
+                                         rel="nofollow">
+                                        xs:ID                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAChar">Substructures</h5> 
+                <ul class="level2  RNAChar">
+            <li class="level2  RNAChar">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAChar">Definition source</h5>
+<div class="level2 code RNAChar">
+    <pre class="level2 RNAChar">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAChar&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#RNAResidueCharacter&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractChar&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;tokens&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;MSTokenLength&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;prohibited&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;codon&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CodonPosition&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;id&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:ID&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAFormat" class="dataType level1">
+    <a name="RNAFormat"></a>RNAFormat    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAFormat">Description</h5>    
+    <p class="level2 RNAFormat"> The RNAFormat class is the container of RNA column definitions.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAFormat">Inheritance</h5>
+            <p class="level2 RNAFormat">
+            RNAFormat restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractFormat">AbstractFormat</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAFormat">Substructures</h5> 
+                <ul class="level2  RNAFormat">
+            <li class="level2  RNAFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "states", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAStates">RNAStates</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  RNAFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "char", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAChar">RNAChar</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  RNAFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CharSet">CharSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAFormat">Definition source</h5>
+<div class="level2 code RNAFormat">
+    <pre class="level2 RNAFormat">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAFormat&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractFormat&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAStates&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAChar&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CharSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAMapping" class="dataType level1">
+    <a name="RNAMapping"></a>RNAMapping    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAMapping">Description</h5>    
+    <p class="level2 RNAMapping">
+    			An IUPAC RNA ambiguity mapping.
+    		</p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAMapping">Inheritance</h5>
+            <p class="level2 RNAMapping">
+            RNAMapping restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractMapping">AbstractMapping</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAMapping">Definition source</h5>
+<div class="level2 code RNAMapping">
+    <pre class="level2 RNAMapping">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMapping&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAMatrixObsRow" class="dataType level1">
+    <a name="RNAMatrixObsRow"></a>RNAMatrixObsRow    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAMatrixObsRow">Description</h5>    
+    <p class="level2 RNAMatrixObsRow"> This is a row in a matrix of RNA data containing granular observations. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAMatrixObsRow">Inheritance</h5>
+            <p class="level2 RNAMatrixObsRow">
+            RNAMatrixObsRow restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow">AbstractObsRow</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAMatrixObsRow">Substructures</h5> 
+                <ul class="level2  RNAMatrixObsRow">
+            <li class="level2  RNAMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "cell", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAObs">RNAObs</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  RNAMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CellSet">CellSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAMatrixObsRow">Definition source</h5>
+<div class="level2 code RNAMatrixObsRow">
+    <pre class="level2 RNAMatrixObsRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMatrixObsRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsRow&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;cell&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAObs&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CellSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAMatrixSeqRow" class="dataType level1">
+    <a name="RNAMatrixSeqRow"></a>RNAMatrixSeqRow    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAMatrixSeqRow">Description</h5>    
+    <p class="level2 RNAMatrixSeqRow"> This is a row in a matrix of RNA data containing raw sequence data. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAMatrixSeqRow">Inheritance</h5>
+            <p class="level2 RNAMatrixSeqRow">
+            RNAMatrixSeqRow restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow">AbstractSeqRow</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAMatrixSeqRow">Substructures</h5> 
+                <ul class="level2  RNAMatrixSeqRow">
+            <li class="level2  RNAMatrixSeqRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAMatrixSeqRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "seq", 
+                instance of <a href="">RNASeq</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAMatrixSeqRow">Definition source</h5>
+<div class="level2 code RNAMatrixSeqRow">
+    <pre class="level2 RNAMatrixSeqRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMatrixSeqRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqRow&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;seq&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNASeq&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAObs" class="dataType level1">
+    <a name="RNAObs"></a>RNAObs    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAObs">Description</h5>    
+    <p class="level2 RNAObs"> This is a single cell in a matrix containing an RNA nucleotide
+                observation. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAObs">Inheritance</h5>
+            <p class="level2 RNAObs">
+            RNAObs restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObs">AbstractObs</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 RNAObs">Attributes</h5>
+            <table class="level2 RNAObs">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>char</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>state</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAObs">Substructures</h5> 
+                <ul class="level2  RNAObs">
+            <li class="level2  RNAObs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAObs">Definition source</h5>
+<div class="level2 code RNAObs">
+    <pre class="level2 RNAObs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAObs&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#RNAResidueStateDatum&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObs&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAObsMatrix" class="dataType level1">
+    <a name="RNAObsMatrix"></a>RNAObsMatrix    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAObsMatrix">Description</h5>    
+    <p class="level2 RNAObsMatrix">
+                A matrix of rows with single character observations.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAObsMatrix">Inheritance</h5>
+            <p class="level2 RNAObsMatrix">
+            RNAObsMatrix restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix">AbstractObsMatrix</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAObsMatrix">Substructures</h5> 
+                <ul class="level2  RNAObsMatrix">
+            <li class="level2  RNAObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAMatrixObsRow">RNAMatrixObsRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  RNAObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAObsMatrix">Definition source</h5>
+<div class="level2 code RNAObsMatrix">
+    <pre class="level2 RNAObsMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAObsMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsMatrix&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMatrixObsRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAPolymorphicStateSet" class="dataType level1">
+    <a name="RNAPolymorphicStateSet"></a>RNAPolymorphicStateSet    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAPolymorphicStateSet">Description</h5>    
+    <p class="level2 RNAPolymorphicStateSet"> 
+                The RNAPolymorphicStateSet describes a single polymorphic IUPAC ambiguity mapping.                
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAPolymorphicStateSet">Inheritance</h5>
+            <p class="level2 RNAPolymorphicStateSet">
+            RNAPolymorphicStateSet restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet">AbstractPolymorphicStateSet</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 RNAPolymorphicStateSet">Attributes</h5>
+            <table class="level2 RNAPolymorphicStateSet">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/rna/#RNAToken">
+                                        RNAToken                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAPolymorphicStateSet">Substructures</h5> 
+                <ul class="level2  RNAPolymorphicStateSet">
+            <li class="level2  RNAPolymorphicStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "member", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAMapping">RNAMapping</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAPolymorphicStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAUncertainStateSet">RNAUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAPolymorphicStateSet">Definition source</h5>
+<div class="level2 code RNAPolymorphicStateSet">
+    <pre class="level2 RNAPolymorphicStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAPolymorphicStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractPolymorphicStateSet&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;member&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAToken&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNASeqMatrix" class="dataType level1">
+    <a name="RNASeqMatrix"></a>RNASeqMatrix    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNASeqMatrix">Description</h5>    
+    <p class="level2 RNASeqMatrix">
+                A matrix of rows with seq strings of type RNA.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNASeqMatrix">Inheritance</h5>
+            <p class="level2 RNASeqMatrix">
+            RNASeqMatrix restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix">AbstractSeqMatrix</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNASeqMatrix">Substructures</h5> 
+                <ul class="level2  RNASeqMatrix">
+            <li class="level2  RNASeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAMatrixSeqRow">RNAMatrixSeqRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  RNASeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNASeqMatrix">Definition source</h5>
+<div class="level2 code RNASeqMatrix">
+    <pre class="level2 RNASeqMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNASeqMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqMatrix&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMatrixSeqRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAState" class="dataType level1">
+    <a name="RNAState"></a>RNAState    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAState">Description</h5>    
+    <p class="level2 RNAState"> 
+                This is a concrete implementation of the state element, which requires
+                a symbol attribute, in this case restricted to RNAToken, i.e. a single IUPAC nucleotide
+                symbol, and optional mapping elements to refer to other states.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAState">Inheritance</h5>
+            <p class="level2 RNAState">
+            RNAState restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractState">AbstractState</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 RNAState">Attributes</h5>
+            <table class="level2 RNAState">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/rna/#RNAToken">
+                                        RNAToken                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAState">Definition source</h5>
+<div class="level2 code RNAState">
+    <pre class="level2 RNAState">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAState&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractState&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAToken&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAStates" class="dataType level1">
+    <a name="RNAStates"></a>RNAStates    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAStates">Description</h5>    
+    <p class="level2 RNAStates">
+                A container for a set of states.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAStates">Inheritance</h5>
+            <p class="level2 RNAStates">
+            RNAStates restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractStates">AbstractStates</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAStates">Substructures</h5> 
+                <ul class="level2  RNAStates">
+            <li class="level2  RNAStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "state", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAState">RNAState</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "polymorphic_state_set", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAPolymorphicStateSet">RNAPolymorphicStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAUncertainStateSet">RNAUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RNAStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#StateSet">StateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAStates">Definition source</h5>
+<div class="level2 code RNAStates">
+    <pre class="level2 RNAStates">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAStates&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractStates&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAState&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;polymorphic_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAPolymorphicStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RNAUncertainStateSet" class="dataType level1">
+    <a name="RNAUncertainStateSet"></a>RNAUncertainStateSet    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAUncertainStateSet">Description</h5>    
+    <p class="level2 RNAUncertainStateSet"> 
+                The RNAUncertainStateSet describes a single uncertain IUPAC ambiguity mapping.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAUncertainStateSet">Inheritance</h5>
+            <p class="level2 RNAUncertainStateSet">
+            RNAUncertainStateSet restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 RNAUncertainStateSet">Attributes</h5>
+            <table class="level2 RNAUncertainStateSet">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/rna/#RNAToken">
+                                        RNAToken                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 RNAUncertainStateSet">Substructures</h5> 
+                <ul class="level2  RNAUncertainStateSet">
+            <li class="level2  RNAUncertainStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "member", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAMapping">RNAMapping</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAUncertainStateSet">Definition source</h5>
+<div class="level2 code RNAUncertainStateSet">
+    <pre class="level2 RNAUncertainStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;member&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAToken&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RnaCells" class="dataType level1">
+    <a name="RnaCells"></a>RnaCells    </h4>
+
+<!-- description -->
+    <h5 class="level2 RnaCells">Description</h5>    
+    <p class="level2 RnaCells">
+                A RNA characters block consisting of granular cells preceded by metadata.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RnaCells">Inheritance</h5>
+            <p class="level2 RnaCells">
+            RnaCells restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractCells">AbstractCells</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RnaCells">Substructures</h5> 
+                <ul class="level2  RnaCells">
+            <li class="level2  RnaCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RnaCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "format", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAFormat">RNAFormat</a>            
+                (0..1).
+                                            </li>        
+            <li class="level2  RnaCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAObsMatrix">RNAObsMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RnaCells">Definition source</h5>
+<div class="level2 code RnaCells">
+    <pre class="level2 RnaCells">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RnaCells&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractCells&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;format&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAFormat&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAObsMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="RnaSeqs" class="dataType level1">
+    <a name="RnaSeqs"></a>RnaSeqs    </h4>
+
+<!-- description -->
+    <h5 class="level2 RnaSeqs">Description</h5>    
+    <p class="level2 RnaSeqs">
+                A RNA characters block consisting of sequences preceded by metadata.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RnaSeqs">Inheritance</h5>
+            <p class="level2 RnaSeqs">
+            RnaSeqs restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs">AbstractSeqs</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 RnaSeqs">Substructures</h5> 
+                <ul class="level2  RnaSeqs">
+            <li class="level2  RnaSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  RnaSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "format", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNAFormat">RNAFormat</a>            
+                (1..1).
+                                            </li>        
+            <li class="level2  RnaSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/rna/#RNASeqMatrix">RNASeqMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RnaSeqs">Definition source</h5>
+<div class="level2 code RnaSeqs">
+    <pre class="level2 RnaSeqs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RnaSeqs&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqs&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;format&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAFormat&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNASeqMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+    
+    <h3 class="headerstyle"><a name="simpleTypes"></a>Simple types</h3>
+    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="RNASeq" class="dataType level1">
+    <a name="RNASeq"></a>RNASeq    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNASeq">Description</h5>    
+    <p class="level2 RNASeq"> This is a simple type that specifies a sequence of RNA characters,
+                following IUPAC single character symbols for nucleotides (and ambiguities).
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNASeq">Inheritance</h5>
+            <p class="level2 RNASeq">
+            RNASeq restricts                                                                <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeq">AbstractSeq</a>.
+                                            </p>    
+        
+                            <h5 class="level2 RNASeq">Facets</h5>
+            <table class="level2 RNASeq">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Value</td>                
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>pattern</td>
+                            <td>[\-\?ABCDGHKMNRSUVWXY\s]*</td>                
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNASeq">Definition source</h5>
+<div class="level2 code RNASeq">
+    <pre class="level2 RNASeq">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNASeq&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeq&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:pattern</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;[\-\?ABCDGHKMNRSUVWXY\s]*&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="RNAToken" class="dataType level1">
+    <a name="RNAToken"></a>RNAToken    </h4>
+
+<!-- description -->
+    <h5 class="level2 RNAToken">Description</h5>    
+    <p class="level2 RNAToken">
+                The RNAToken simple type is a restriction of AbstractSymbol that defines
+                a token of a IUPAC single character nucleotide token.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 RNAToken">Inheritance</h5>
+            <p class="level2 RNAToken">
+            RNAToken restricts                                                                <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSymbol">AbstractSymbol</a>.
+                                            </p>    
+        
+                            <h5 class="level2 RNAToken">Facets</h5>
+            <table class="level2 RNAToken">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Value</td>                
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>pattern</td>
+                            <td>[\-\?ABCDGHKMNRSUVWXY]</td>                
+                        </tr>
+                                            <tr>
+                            <td>length</td>
+                            <td>1</td>                
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 RNAToken">Definition source</h5>
+<div class="level2 code RNAToken">
+    <pre class="level2 RNAToken">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;RNAToken&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSymbol&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:pattern</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;[\-\?ABCDGHKMNRSUVWXY]&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:length</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+    
+<!-- subroutine for depth-first recursion in substructure -->
+
+<h3 class="headerstyle"><a name="seeAlso"></a>See also</h3>
+
+    <p>
+        ~/nexml/xsd/characters/rna.xsd <a href="http://www.w3.org/TR/xmlschema-1/#compound-schema" 
+        title="About the xs:include element">includes</a> the following other files:
+    </p>    
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/characters/abstractcharacters/">~/nexml/xsd/characters/abstractcharacters.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/meta/sets/">~/nexml/xsd/meta/sets.xsd</a></li>
+            </ul>
+
+    <p>
+        ~/nexml/xsd/characters/rna.xsd is included in:
+    </p>
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/characters/characters/">~/nexml/xsd/characters/characters.xsd</a></li>
+            </ul>
+<small class="credit">
+    This page summarizes the contents of schema file "~/nexml/xsd/characters/rna.xsd".
+    Generated on Sat Sep 20 23:48:14 2014.
+</small>      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

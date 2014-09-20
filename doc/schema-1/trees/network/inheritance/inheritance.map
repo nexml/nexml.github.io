@@ -1,0 +1,14 @@
+base referer
+rect /doc/schema-1/trees/network/#FloatNetwork 5,485 130,533
+rect /doc/schema-1/trees/abstracttrees/#AbstractNetwork 133,389 283,437
+rect /doc/schema-1/trees/network/#IntNetwork 154,485 262,533
+rect /doc/schema-1/abstract/#IDTagged 360,293 456,341
+rect /doc/schema-1/trees/abstracttrees/#AbstractEdge 346,389 469,437
+rect /doc/schema-1/abstract/#OptionalTaxonLinked 574,389 759,437
+rect /doc/schema-1/abstract/#Labelled 365,197 451,245
+rect /doc/schema-1/abstract/#Annotated 358,101 457,149
+rect /doc/schema-1/meta/annotations/#Base 372,5 444,53
+rect /doc/schema-1/trees/network/#NetworkFloatEdge 286,485 450,533
+rect /doc/schema-1/trees/network/#NetworkIntEdge 474,485 619,533
+rect /doc/schema-1/trees/network/#NetworkNode 643,581 770,629
+rect /doc/schema-1/trees/abstracttrees/#AbstractNode 644,485 769,533

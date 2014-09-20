@@ -1,0 +1,78 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/rna.xsd upwards. Graph generated on Sat Sep 20 23:48:14 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/characters/rna.xsd";
+                                                                RNAChar [URL="/doc/schema-1/characters/rna/#RNAChar",shape=box];        
+                                                                        AbstractChar -> RNAChar [color=red];
+                                                                                AbstractChar [URL="/doc/schema-1/characters/abstractcharacters/#AbstractChar",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractChar [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                RNAFormat [URL="/doc/schema-1/characters/rna/#RNAFormat",shape=box];        
+                                                                        AbstractFormat -> RNAFormat [color=red];
+                                                                                AbstractFormat [URL="/doc/schema-1/characters/abstractcharacters/#AbstractFormat",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractFormat [color=blue];
+                                                                                                                                                                                                                                            RNAMapping [URL="/doc/schema-1/characters/rna/#RNAMapping",shape=box];        
+                                                                        AbstractMapping -> RNAMapping [color=red];
+                                                                                AbstractMapping [URL="/doc/schema-1/characters/abstractcharacters/#AbstractMapping",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> AbstractMapping [color=blue];
+                                                                                                                                                RNAMatrixObsRow [URL="/doc/schema-1/characters/rna/#RNAMatrixObsRow",shape=box];        
+                                                                        AbstractObsRow -> RNAMatrixObsRow [color=red];
+                                                                                AbstractObsRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractObsRow [color=blue];
+                                                                                TaxonLinked [URL="/doc/schema-1/abstract/#TaxonLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxonLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    RNAMatrixSeqRow [URL="/doc/schema-1/characters/rna/#RNAMatrixSeqRow",shape=box];        
+                                                                        AbstractSeqRow -> RNAMatrixSeqRow [color=red];
+                                                                                AbstractSeqRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractSeqRow [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                RNAObs [URL="/doc/schema-1/characters/rna/#RNAObs",shape=box];        
+                                                                        AbstractObs -> RNAObs [color=red];
+                                                                                AbstractObs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObs",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> AbstractObs [color=blue];
+                                                                                                                                                                                                                                                                                                                                        RNAObsMatrix [URL="/doc/schema-1/characters/rna/#RNAObsMatrix",shape=box];        
+                                                                        AbstractObsMatrix -> RNAObsMatrix [color=red];
+                                                                                AbstractObsMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractObsMatrix [color=blue];
+                                                                                                                                                                                                                                            RNAPolymorphicStateSet [URL="/doc/schema-1/characters/rna/#RNAPolymorphicStateSet",shape=box];        
+                                                                        AbstractPolymorphicStateSet -> RNAPolymorphicStateSet [color=red];
+                                                                                AbstractPolymorphicStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractUncertainStateSet -> AbstractPolymorphicStateSet [color=blue];
+                                                                                AbstractUncertainStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractState -> AbstractUncertainStateSet [color=blue];
+                                                                                AbstractState [URL="/doc/schema-1/characters/abstractcharacters/#AbstractState",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractState [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    RNASeqMatrix [URL="/doc/schema-1/characters/rna/#RNASeqMatrix",shape=box];        
+                                                                        AbstractSeqMatrix -> RNASeqMatrix [color=red];
+                                                                                AbstractSeqMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractSeqMatrix [color=blue];
+                                                                                                                                                                                                                                            RNAState [URL="/doc/schema-1/characters/rna/#RNAState",shape=box];        
+                                                                        AbstractState -> RNAState [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                RNAStates [URL="/doc/schema-1/characters/rna/#RNAStates",shape=box];        
+                                                                        AbstractStates -> RNAStates [color=red];
+                                                                                AbstractStates [URL="/doc/schema-1/characters/abstractcharacters/#AbstractStates",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractStates [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    RNAUncertainStateSet [URL="/doc/schema-1/characters/rna/#RNAUncertainStateSet",shape=box];        
+                                                                        AbstractUncertainStateSet -> RNAUncertainStateSet [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            RnaCells [URL="/doc/schema-1/characters/rna/#RnaCells",shape=box];        
+                                                                        AbstractCells -> RnaCells [color=red];
+                                                                                AbstractCells [URL="/doc/schema-1/characters/abstractcharacters/#AbstractCells",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractCells [color=blue];
+                                                                                AbstractBlock [URL="/doc/schema-1/characters/abstractcharacters/#AbstractBlock",shape=box,color=lightgrey,style=filled];
+                                                                                TaxaLinked -> AbstractBlock [color=blue];
+                                                                                TaxaLinked [URL="/doc/schema-1/abstract/#TaxaLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxaLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    RnaSeqs [URL="/doc/schema-1/characters/rna/#RnaSeqs",shape=box];        
+                                                                        AbstractSeqs -> RnaSeqs [color=red];
+                                                                                AbstractSeqs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractSeqs [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+

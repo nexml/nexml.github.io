@@ -1,0 +1,8 @@
+base referer
+rect /doc/schema-1/abstract/#Annotated 232,101 331,149
+rect /doc/schema-1/abstract/#Labelled 238,197 325,245
+rect /doc/schema-1/meta/annotations/#Base 246,5 318,53
+rect /doc/schema-1/abstract/#IDTagged 234,293 330,341
+rect /doc/schema-1/abstract/#OptionalTaxonLinked 17,389 203,437
+rect /doc/schema-1/abstract/#TaxaLinked 227,389 337,437
+rect /doc/schema-1/abstract/#TaxonLinked 361,389 482,437

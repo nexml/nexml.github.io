@@ -1,0 +1,7 @@
+base referer
+rect /doc/schema-1/taxa/taxa/#Taxa 170,389 242,437
+rect /doc/schema-1/abstract/#IDTagged 206,293 302,341
+rect /doc/schema-1/taxa/taxa/#Taxon 266,389 338,437
+rect /doc/schema-1/abstract/#Labelled 211,197 297,245
+rect /doc/schema-1/abstract/#Annotated 205,101 304,149
+rect /doc/schema-1/meta/annotations/#Base 218,5 290,53

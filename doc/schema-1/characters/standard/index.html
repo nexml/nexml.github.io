@@ -1,0 +1,1179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0 ~/nexml/xsd/characters/standard.xsd</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0 ~/nexml/xsd/characters/standard.xsd</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Schema module documentation</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1/characters/standard/ -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                <a href="/doc/schema-1">schema-1</a> /
+                                                                                <a href="/doc/schema-1/characters">characters</a> /
+                                                                                standard                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1/characters/standard/">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1/characters/standard/">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1/characters/standard/">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1/characters/standard/">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain">Description</h3>
+    <p>
+            This module defines concrete subclasses for the 
+            <a href="../abstract">abstract</a> character matrix components 
+            that all character matrices must implement. The subclasses
+            defined here apply to "standard" categorical character data, such as
+            counts of morpholical features. In a verbose notation, this data
+            is represented as the "state" attribute of the &lt;cell> 
+            element. In a compact notation, the same data is represented as
+            a sequence of space-separated integers.
+        </p><p><strong>Other views</strong> (open in new window):</p>
+<div class="credit linkshare">
+    <a href="inheritance/" target="nexml_inheritance">
+        <img 
+            class="icon" 
+            src="/img/chart_organisation.png" 
+            alt="organisation chart" /> inheritance tree
+    </a> |
+    <a href="inclusions/" target="nexml_inclusions">
+        <img 
+            class="icon" 
+            src="/img/sitemap.png" 
+            alt="file hierarchy" /> inclusions tree
+    </a> |    
+    <a href="/nexml/xsd/characters/standard.xsd" target="nexml_source">
+        <img 
+            class="icon" 
+            src="/img/page_white_code_red.png" 
+            alt="xml schema code" /> schema source
+    </a>     
+</div>
+    <h3 class="headerstyle"><a name="complexTypes"></a>Complex types</h3>
+    
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardCells" class="dataType level1">
+    <a name="StandardCells"></a>StandardCells    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardCells">Description</h5>    
+    <p class="level2 StandardCells">
+                A standard characters block consisting of granular cells preceded by metadata.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardCells">Inheritance</h5>
+            <p class="level2 StandardCells">
+            StandardCells restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractCells">AbstractCells</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardCells">Substructures</h5> 
+                <ul class="level2  StandardCells">
+            <li class="level2  StandardCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "format", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardFormat">StandardFormat</a>            
+                (1..1).
+                                            </li>        
+            <li class="level2  StandardCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardObsMatrix">StandardObsMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardCells">Definition source</h5>
+<div class="level2 code StandardCells">
+    <pre class="level2 StandardCells">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardCells&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractCells&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;format&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardFormat&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardObsMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardChar" class="dataType level1">
+    <a name="StandardChar"></a>StandardChar    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardChar">Description</h5>    
+    <p class="level2 StandardChar"> A concrete implementation of the char element, which requires
+                a states attribute to refer to a set of defined states </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardChar">Inheritance</h5>
+            <p class="level2 StandardChar">
+            StandardChar restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractChar">AbstractChar</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 StandardChar">Attributes</h5>
+            <table class="level2 StandardChar">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>tokens</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#MSTokenLength">
+                                        MSTokenLength                                    </a>
+                                                            </td>
+                            <td>prohibited</td>
+                        </tr>
+                                            <tr>
+                            <td>states</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>codon</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#CodonPosition">
+                                        CodonPosition                                    </a>
+                                                            </td>
+                            <td>prohibited</td>
+                        </tr>
+                                            <tr>
+                            <td>id</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#ID"
+                                         rel="nofollow">
+                                        xs:ID                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardChar">Substructures</h5> 
+                <ul class="level2  StandardChar">
+            <li class="level2  StandardChar">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardChar">Definition source</h5>
+<div class="level2 code StandardChar">
+    <pre class="level2 StandardChar">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardChar&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#StandardCharacter&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractChar&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;tokens&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;MSTokenLength&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;prohibited&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;codon&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CodonPosition&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;prohibited&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;id&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:ID&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardFormat" class="dataType level1">
+    <a name="StandardFormat"></a>StandardFormat    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardFormat">Description</h5>    
+    <p class="level2 StandardFormat"> The StandardFormat class is the container of standard column definitions.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardFormat">Inheritance</h5>
+            <p class="level2 StandardFormat">
+            StandardFormat restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractFormat">AbstractFormat</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardFormat">Substructures</h5> 
+                <ul class="level2  StandardFormat">
+            <li class="level2  StandardFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "states", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardStates">StandardStates</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  StandardFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "char", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardChar">StandardChar</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  StandardFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CharSet">CharSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardFormat">Definition source</h5>
+<div class="level2 code StandardFormat">
+    <pre class="level2 StandardFormat">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardFormat&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractFormat&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardStates&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardChar&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CharSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardMapping" class="dataType level1">
+    <a name="StandardMapping"></a>StandardMapping    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardMapping">Description</h5>    
+    <p class="level2 StandardMapping">A standard character ambiguity mapping.</p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardMapping">Inheritance</h5>
+            <p class="level2 StandardMapping">
+            StandardMapping restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractMapping">AbstractMapping</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardMapping">Definition source</h5>
+<div class="level2 code StandardMapping">
+    <pre class="level2 StandardMapping">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMapping&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardMatrixObsRow" class="dataType level1">
+    <a name="StandardMatrixObsRow"></a>StandardMatrixObsRow    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardMatrixObsRow">Description</h5>    
+    <p class="level2 StandardMatrixObsRow"> This is a row in a matrix of standard data as granular obervations. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardMatrixObsRow">Inheritance</h5>
+            <p class="level2 StandardMatrixObsRow">
+            StandardMatrixObsRow restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow">AbstractObsRow</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardMatrixObsRow">Substructures</h5> 
+                <ul class="level2  StandardMatrixObsRow">
+            <li class="level2  StandardMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "cell", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardObs">StandardObs</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  StandardMatrixObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CellSet">CellSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardMatrixObsRow">Definition source</h5>
+<div class="level2 code StandardMatrixObsRow">
+    <pre class="level2 StandardMatrixObsRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMatrixObsRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsRow&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;cell&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardObs&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CellSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardMatrixSeqRow" class="dataType level1">
+    <a name="StandardMatrixSeqRow"></a>StandardMatrixSeqRow    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardMatrixSeqRow">Description</h5>    
+    <p class="level2 StandardMatrixSeqRow"> This is a row in a matrix of standard data as character sequences. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardMatrixSeqRow">Inheritance</h5>
+            <p class="level2 StandardMatrixSeqRow">
+            StandardMatrixSeqRow restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow">AbstractSeqRow</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardMatrixSeqRow">Substructures</h5> 
+                <ul class="level2  StandardMatrixSeqRow">
+            <li class="level2  StandardMatrixSeqRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardMatrixSeqRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "seq", 
+                instance of <a href="">StandardSeq</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardMatrixSeqRow">Definition source</h5>
+<div class="level2 code StandardMatrixSeqRow">
+    <pre class="level2 StandardMatrixSeqRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMatrixSeqRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqRow&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;seq&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardSeq&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardObs" class="dataType level1">
+    <a name="StandardObs"></a>StandardObs    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardObs">Description</h5>    
+    <p class="level2 StandardObs"> This is a single cell in a matrix containing a standard
+                observation. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardObs">Inheritance</h5>
+            <p class="level2 StandardObs">
+            StandardObs restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObs">AbstractObs</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 StandardObs">Attributes</h5>
+            <table class="level2 StandardObs">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>char</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>state</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardObs">Substructures</h5> 
+                <ul class="level2  StandardObs">
+            <li class="level2  StandardObs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardObs">Definition source</h5>
+<div class="level2 code StandardObs">
+    <pre class="level2 StandardObs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardObs&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#StandardStateDatum&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObs&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardObsMatrix" class="dataType level1">
+    <a name="StandardObsMatrix"></a>StandardObsMatrix    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardObsMatrix">Description</h5>    
+    <p class="level2 StandardObsMatrix">
+                A matrix of rows with single character observations.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardObsMatrix">Inheritance</h5>
+            <p class="level2 StandardObsMatrix">
+            StandardObsMatrix restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix">AbstractObsMatrix</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardObsMatrix">Substructures</h5> 
+                <ul class="level2  StandardObsMatrix">
+            <li class="level2  StandardObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardMatrixObsRow">StandardMatrixObsRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  StandardObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardObsMatrix">Definition source</h5>
+<div class="level2 code StandardObsMatrix">
+    <pre class="level2 StandardObsMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardObsMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsMatrix&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMatrixObsRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardPolymorphicStateSet" class="dataType level1">
+    <a name="StandardPolymorphicStateSet"></a>StandardPolymorphicStateSet    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardPolymorphicStateSet">Description</h5>    
+    <p class="level2 StandardPolymorphicStateSet"> 
+                The StandardPolymorphicStateSet type is a single polymorphic ambiguity mapping.                
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardPolymorphicStateSet">Inheritance</h5>
+            <p class="level2 StandardPolymorphicStateSet">
+            StandardPolymorphicStateSet restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet">AbstractPolymorphicStateSet</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardPolymorphicStateSet">Substructures</h5> 
+                <ul class="level2  StandardPolymorphicStateSet">
+            <li class="level2  StandardPolymorphicStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "member", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardMapping">StandardMapping</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardPolymorphicStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardUncertainStateSet">StandardUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardPolymorphicStateSet">Definition source</h5>
+<div class="level2 code StandardPolymorphicStateSet">
+    <pre class="level2 StandardPolymorphicStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardPolymorphicStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractPolymorphicStateSet&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;member&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardSeqMatrix" class="dataType level1">
+    <a name="StandardSeqMatrix"></a>StandardSeqMatrix    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardSeqMatrix">Description</h5>    
+    <p class="level2 StandardSeqMatrix">
+                A matrix of rows with seq strings of type standard.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardSeqMatrix">Inheritance</h5>
+            <p class="level2 StandardSeqMatrix">
+            StandardSeqMatrix restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix">AbstractSeqMatrix</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardSeqMatrix">Substructures</h5> 
+                <ul class="level2  StandardSeqMatrix">
+            <li class="level2  StandardSeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardMatrixSeqRow">StandardMatrixSeqRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  StandardSeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardSeqMatrix">Definition source</h5>
+<div class="level2 code StandardSeqMatrix">
+    <pre class="level2 StandardSeqMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardSeqMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqMatrix&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMatrixSeqRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardSeqs" class="dataType level1">
+    <a name="StandardSeqs"></a>StandardSeqs    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardSeqs">Description</h5>    
+    <p class="level2 StandardSeqs">
+                A standard characters block consisting of sequences preceded by metadata.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardSeqs">Inheritance</h5>
+            <p class="level2 StandardSeqs">
+            StandardSeqs restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs">AbstractSeqs</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardSeqs">Substructures</h5> 
+                <ul class="level2  StandardSeqs">
+            <li class="level2  StandardSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "format", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardFormat">StandardFormat</a>            
+                (1..1).
+                                            </li>        
+            <li class="level2  StandardSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardSeqMatrix">StandardSeqMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardSeqs">Definition source</h5>
+<div class="level2 code StandardSeqs">
+    <pre class="level2 StandardSeqs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardSeqs&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqs&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;format&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardFormat&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardSeqMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardState" class="dataType level1">
+    <a name="StandardState"></a>StandardState    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardState">Description</h5>    
+    <p class="level2 StandardState"> This is a concrete implementation of the state element, which requires
+                a symbol element, in this case restricted to integers, and optional mapping
+                elements to refer to other states. </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardState">Inheritance</h5>
+            <p class="level2 StandardState">
+            StandardState restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractState">AbstractState</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 StandardState">Attributes</h5>
+            <table class="level2 StandardState">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/standard/#StandardToken">
+                                        StandardToken                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardState">Substructures</h5> 
+                <ul class="level2  StandardState">
+            <li class="level2  StandardState">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardState">Definition source</h5>
+<div class="level2 code StandardState">
+    <pre class="level2 StandardState">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardState&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractState&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardToken&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardStates" class="dataType level1">
+    <a name="StandardStates"></a>StandardStates    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardStates">Description</h5>    
+    <p class="level2 StandardStates">
+                A container for a set of states.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardStates">Inheritance</h5>
+            <p class="level2 StandardStates">
+            StandardStates restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractStates">AbstractStates</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardStates">Substructures</h5> 
+                <ul class="level2  StandardStates">
+            <li class="level2  StandardStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "state", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardState">StandardState</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "polymorphic_state_set", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardPolymorphicStateSet">StandardPolymorphicStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardUncertainStateSet">StandardUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  StandardStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#StateSet">StateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardStates">Definition source</h5>
+<div class="level2 code StandardStates">
+    <pre class="level2 StandardStates">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardStates&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractStates&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardState&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;polymorphic_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardPolymorphicStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="StandardUncertainStateSet" class="dataType level1">
+    <a name="StandardUncertainStateSet"></a>StandardUncertainStateSet    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardUncertainStateSet">Description</h5>    
+    <p class="level2 StandardUncertainStateSet"> 
+                The StandardUncertainStateSet type is a single uncertain ambiguity mapping.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardUncertainStateSet">Inheritance</h5>
+            <p class="level2 StandardUncertainStateSet">
+            StandardUncertainStateSet restricts                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 StandardUncertainStateSet">Attributes</h5>
+            <table class="level2 StandardUncertainStateSet">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#string"
+                                         rel="nofollow">
+                                        xs:string                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 StandardUncertainStateSet">Substructures</h5> 
+                <ul class="level2  StandardUncertainStateSet">
+            <li class="level2  StandardUncertainStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "member", 
+                instance of <a href="/doc/schema-1/characters/standard/#StandardMapping">StandardMapping</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardUncertainStateSet">Definition source</h5>
+<div class="level2 code StandardUncertainStateSet">
+    <pre class="level2 StandardUncertainStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;member&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:string&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+    
+    <h3 class="headerstyle"><a name="simpleTypes"></a>Simple types</h3>
+    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="StandardSeq" class="dataType level1">
+    <a name="StandardSeq"></a>StandardSeq    </h4>
+
+<!-- description -->
+    <h5 class="level2 StandardSeq">Description</h5>    
+    <p class="level2 StandardSeq"> This is a simple type that specifies a sequence of standard characters.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 StandardSeq">Inheritance</h5>
+            <p class="level2 StandardSeq">
+            StandardSeq restricts                                                                <a href="/doc/schema-1/characters/abstractcharacters/#AbstractTokenList">AbstractTokenList</a>.
+                                            </p>    
+        
+                            <h5 class="level2 StandardSeq">Facets</h5>
+            <table class="level2 StandardSeq">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Value</td>                
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>pattern</td>
+                            <td>[0-9\-\?]+(\s[0-9\-\?]+)*</td>                
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardSeq">Definition source</h5>
+<div class="level2 code StandardSeq">
+    <pre class="level2 StandardSeq">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardSeq&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractTokenList&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:pattern</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;[0-9\-\?]+(\s[0-9\-\?]+)*&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="StandardToken" class="dataType level1">
+    <a name="StandardToken"></a>StandardToken    </h4>
+
+<!-- description -->
+
+<!-- inheritance -->
+    <h5 class="level2 StandardToken">Inheritance</h5>
+            <p class="level2 StandardToken">
+            StandardToken restricts                                                                <a href="http://www.w3.org/TR/xmlschema-2/#integer" rel="nofollow">
+                    xs:integer</a>.
+                                            </p>    
+        
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 StandardToken">Definition source</h5>
+<div class="level2 code StandardToken">
+    <pre class="level2 StandardToken">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;StandardToken&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:integer&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+    
+<!-- subroutine for depth-first recursion in substructure -->
+
+<h3 class="headerstyle"><a name="seeAlso"></a>See also</h3>
+
+    <p>
+        ~/nexml/xsd/characters/standard.xsd <a href="http://www.w3.org/TR/xmlschema-1/#compound-schema" 
+        title="About the xs:include element">includes</a> the following other files:
+    </p>    
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/characters/abstractcharacters/">~/nexml/xsd/characters/abstractcharacters.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/meta/sets/">~/nexml/xsd/meta/sets.xsd</a></li>
+            </ul>
+
+    <p>
+        ~/nexml/xsd/characters/standard.xsd is included in:
+    </p>
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/characters/characters/">~/nexml/xsd/characters/characters.xsd</a></li>
+            </ul>
+<small class="credit">
+    This page summarizes the contents of schema file "~/nexml/xsd/characters/standard.xsd".
+    Generated on Sat Sep 20 23:48:15 2014.
+</small>      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

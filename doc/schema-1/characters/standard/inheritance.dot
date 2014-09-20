@@ -1,0 +1,78 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/standard.xsd upwards. Graph generated on Sat Sep 20 23:48:15 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/characters/standard.xsd";
+                                                                StandardCells [URL="/doc/schema-1/characters/standard/#StandardCells",shape=box];        
+                                                                        AbstractCells -> StandardCells [color=red];
+                                                                                AbstractCells [URL="/doc/schema-1/characters/abstractcharacters/#AbstractCells",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractCells [color=blue];
+                                                                                AbstractBlock [URL="/doc/schema-1/characters/abstractcharacters/#AbstractBlock",shape=box,color=lightgrey,style=filled];
+                                                                                TaxaLinked -> AbstractBlock [color=blue];
+                                                                                TaxaLinked [URL="/doc/schema-1/abstract/#TaxaLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxaLinked [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                StandardChar [URL="/doc/schema-1/characters/standard/#StandardChar",shape=box];        
+                                                                        AbstractChar -> StandardChar [color=red];
+                                                                                AbstractChar [URL="/doc/schema-1/characters/abstractcharacters/#AbstractChar",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractChar [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    StandardFormat [URL="/doc/schema-1/characters/standard/#StandardFormat",shape=box];        
+                                                                        AbstractFormat -> StandardFormat [color=red];
+                                                                                AbstractFormat [URL="/doc/schema-1/characters/abstractcharacters/#AbstractFormat",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractFormat [color=blue];
+                                                                                                                                                                                                                                            StandardMapping [URL="/doc/schema-1/characters/standard/#StandardMapping",shape=box];        
+                                                                        AbstractMapping -> StandardMapping [color=red];
+                                                                                AbstractMapping [URL="/doc/schema-1/characters/abstractcharacters/#AbstractMapping",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> AbstractMapping [color=blue];
+                                                                                                                                                StandardMatrixObsRow [URL="/doc/schema-1/characters/standard/#StandardMatrixObsRow",shape=box];        
+                                                                        AbstractObsRow -> StandardMatrixObsRow [color=red];
+                                                                                AbstractObsRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractObsRow [color=blue];
+                                                                                TaxonLinked [URL="/doc/schema-1/abstract/#TaxonLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> TaxonLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    StandardMatrixSeqRow [URL="/doc/schema-1/characters/standard/#StandardMatrixSeqRow",shape=box];        
+                                                                        AbstractSeqRow -> StandardMatrixSeqRow [color=red];
+                                                                                AbstractSeqRow [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow",shape=box,color=lightgrey,style=filled];
+                                                                                TaxonLinked -> AbstractSeqRow [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                StandardObs [URL="/doc/schema-1/characters/standard/#StandardObs",shape=box];        
+                                                                        AbstractObs -> StandardObs [color=red];
+                                                                                AbstractObs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObs",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> AbstractObs [color=blue];
+                                                                                                                                                                                                                                                                                                                                        StandardObsMatrix [URL="/doc/schema-1/characters/standard/#StandardObsMatrix",shape=box];        
+                                                                        AbstractObsMatrix -> StandardObsMatrix [color=red];
+                                                                                AbstractObsMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractObsMatrix [color=blue];
+                                                                                                                                                                                                                                            StandardPolymorphicStateSet [URL="/doc/schema-1/characters/standard/#StandardPolymorphicStateSet",shape=box];        
+                                                                        AbstractPolymorphicStateSet -> StandardPolymorphicStateSet [color=red];
+                                                                                AbstractPolymorphicStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractUncertainStateSet -> AbstractPolymorphicStateSet [color=blue];
+                                                                                AbstractUncertainStateSet [URL="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractState -> AbstractUncertainStateSet [color=blue];
+                                                                                AbstractState [URL="/doc/schema-1/characters/abstractcharacters/#AbstractState",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractState [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    StandardSeqMatrix [URL="/doc/schema-1/characters/standard/#StandardSeqMatrix",shape=box];        
+                                                                        AbstractSeqMatrix -> StandardSeqMatrix [color=red];
+                                                                                AbstractSeqMatrix [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> AbstractSeqMatrix [color=blue];
+                                                                                                                                                                                                                                            StandardSeqs [URL="/doc/schema-1/characters/standard/#StandardSeqs",shape=box];        
+                                                                        AbstractSeqs -> StandardSeqs [color=red];
+                                                                                AbstractSeqs [URL="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs",shape=box,color=lightgrey,style=filled];
+                                                                                AbstractBlock -> AbstractSeqs [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            StandardState [URL="/doc/schema-1/characters/standard/#StandardState",shape=box];        
+                                                                        AbstractState -> StandardState [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                StandardStates [URL="/doc/schema-1/characters/standard/#StandardStates",shape=box];        
+                                                                        AbstractStates -> StandardStates [color=red];
+                                                                                AbstractStates [URL="/doc/schema-1/characters/abstractcharacters/#AbstractStates",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> AbstractStates [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    StandardUncertainStateSet [URL="/doc/schema-1/characters/standard/#StandardUncertainStateSet",shape=box];        
+                                                                        AbstractUncertainStateSet -> StandardUncertainStateSet [color=red];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+

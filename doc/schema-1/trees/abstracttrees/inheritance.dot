@@ -1,0 +1,30 @@
+/*
+    this graphviz graph documents the nexml inheritance tree
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/trees/abstracttrees.xsd upwards. Graph generated on Sat Sep 20 23:48:16 2014    from template: $Id$    
+*/
+digraph inheritance {
+    label="Inheritance tree for complex types in ~/nexml/xsd/trees/abstracttrees.xsd";
+                                                                AbstractEdge [URL="/doc/schema-1/trees/abstracttrees/#AbstractEdge",shape=box,color=lightgrey,style=filled];
+                                                                        IDTagged -> AbstractEdge [color=blue];
+                                                                                IDTagged [URL="/doc/schema-1/abstract/#IDTagged",shape=box,color=lightgrey,style=filled];
+                                                                                Labelled -> IDTagged [color=blue];
+                                                                                Labelled [URL="/doc/schema-1/abstract/#Labelled",shape=box,color=lightgrey,style=filled];
+                                                                                Annotated -> Labelled [color=blue];
+                                                                                Annotated [URL="/doc/schema-1/abstract/#Annotated",shape=box,color=lightgrey,style=filled];
+                                                                                Base -> Annotated [color=blue];
+                                                                                Base [URL="/doc/schema-1/meta/annotations/#Base",shape=box,color=lightgrey,style=filled];
+                                                                                                                AbstractNetwork [URL="/doc/schema-1/trees/abstracttrees/#AbstractNetwork",shape=box,color=lightgrey,style=filled];
+                                                                        IDTagged -> AbstractNetwork [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AbstractNode [URL="/doc/schema-1/trees/abstracttrees/#AbstractNode",shape=box,color=lightgrey,style=filled];
+                                                                        OptionalTaxonLinked -> AbstractNode [color=blue];
+                                                                                OptionalTaxonLinked [URL="/doc/schema-1/abstract/#OptionalTaxonLinked",shape=box,color=lightgrey,style=filled];
+                                                                                IDTagged -> OptionalTaxonLinked [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AbstractRootEdge [URL="/doc/schema-1/trees/abstracttrees/#AbstractRootEdge",shape=box,color=lightgrey,style=filled];
+                                                                        IDTagged -> AbstractRootEdge [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AbstractTree [URL="/doc/schema-1/trees/abstracttrees/#AbstractTree",shape=box,color=lightgrey,style=filled];
+                                                                        IDTagged -> AbstractTree [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                                                                    AbstractTrees [URL="/doc/schema-1/trees/abstracttrees/#AbstractTrees",shape=box,color=lightgrey,style=filled];
+                                                                        IDTagged -> AbstractTrees [color=blue];
+                                                                                                                                                                                                                                                                                                                                                                                }
+
+

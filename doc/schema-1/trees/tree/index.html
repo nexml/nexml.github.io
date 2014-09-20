@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0 ~/nexml/xsd/trees/tree.xsd</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0 ~/nexml/xsd/trees/tree.xsd</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Schema module documentation</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1/trees/tree/ -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                <a href="/doc/schema-1">schema-1</a> /
+                                                                                <a href="/doc/schema-1/trees">trees</a> /
+                                                                                tree                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1/trees/tree/">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1/trees/tree/">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1/trees/tree/">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1/trees/tree/">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain">Description</h3>
+    <p>
+            This module defines the components of trees, graphs 
+            where edges have an in-degree that of 1. The
+            types defined in this module are concrete implementations
+            that inherit from the abstract types in the 
+            <a href="../abstracttrees">abstract trees module</a>.
+            <br/><br/> 
+            Depending on the concrete subclass, edges in trees either
+            have lengths formatted as integers or lengths formatted as
+            floating point numbers.
+        </p><p><strong>Other views</strong> (open in new window):</p>
+<div class="credit linkshare">
+    <a href="inheritance/" target="nexml_inheritance">
+        <img 
+            class="icon" 
+            src="/img/chart_organisation.png" 
+            alt="organisation chart" /> inheritance tree
+    </a> |
+    <a href="inclusions/" target="nexml_inclusions">
+        <img 
+            class="icon" 
+            src="/img/sitemap.png" 
+            alt="file hierarchy" /> inclusions tree
+    </a> |    
+    <a href="/nexml/xsd/trees/tree.xsd" target="nexml_source">
+        <img 
+            class="icon" 
+            src="/img/page_white_code_red.png" 
+            alt="xml schema code" /> schema source
+    </a>     
+</div>
+    <h3 class="headerstyle"><a name="complexTypes"></a>Complex types</h3>
+    
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="FloatTree" class="dataType level1">
+    <a name="FloatTree"></a>FloatTree    </h4>
+
+<!-- description -->
+    <h5 class="level2 FloatTree">Description</h5>    
+    <p class="level2 FloatTree">
+                A concrete tree implementation, with floating point edge lengths.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 FloatTree">Inheritance</h5>
+            <p class="level2 FloatTree">
+            FloatTree restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractTree">AbstractTree</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 FloatTree">Substructures</h5> 
+                <ul class="level2  FloatTree">
+            <li class="level2  FloatTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  FloatTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "node", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeNode">TreeNode</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  FloatTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "rootedge", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeFloatRootEdge">TreeFloatRootEdge</a>            
+                (0..1).
+                                            </li>        
+            <li class="level2  FloatTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "edge", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeFloatEdge">TreeFloatEdge</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  FloatTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#NodeAndRootEdgeAndEdgeSet">NodeAndRootEdgeAndEdgeSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 FloatTree">Definition source</h5>
+<div class="level2 code FloatTree">
+    <pre class="level2 FloatTree">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;FloatTree&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractTree&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;node&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeNode&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;rootedge&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeFloatRootEdge&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;edge&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeFloatEdge&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;NodeAndRootEdgeAndEdgeSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="IntTree" class="dataType level1">
+    <a name="IntTree"></a>IntTree    </h4>
+
+<!-- description -->
+    <h5 class="level2 IntTree">Description</h5>    
+    <p class="level2 IntTree">
+                A concrete tree implementation, with integer edge lengths.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 IntTree">Inheritance</h5>
+            <p class="level2 IntTree">
+            IntTree restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractTree">AbstractTree</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 IntTree">Substructures</h5> 
+                <ul class="level2  IntTree">
+            <li class="level2  IntTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  IntTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "node", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeNode">TreeNode</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  IntTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "rootedge", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeIntRootEdge">TreeIntRootEdge</a>            
+                (0..1).
+                                            </li>        
+            <li class="level2  IntTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "edge", 
+                instance of <a href="/doc/schema-1/trees/tree/#TreeIntEdge">TreeIntEdge</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  IntTree">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#NodeAndRootEdgeAndEdgeSet">NodeAndRootEdgeAndEdgeSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 IntTree">Definition source</h5>
+<div class="level2 code IntTree">
+    <pre class="level2 IntTree">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;IntTree&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractTree&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;node&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeNode&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;rootedge&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeIntRootEdge&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;edge&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeIntEdge&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;NodeAndRootEdgeAndEdgeSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="TreeFloatEdge" class="dataType level1">
+    <a name="TreeFloatEdge"></a>TreeFloatEdge    </h4>
+
+<!-- description -->
+    <h5 class="level2 TreeFloatEdge">Description</h5>    
+    <p class="level2 TreeFloatEdge">
+                A concrete edge implementation, with float length.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 TreeFloatEdge">Inheritance</h5>
+            <p class="level2 TreeFloatEdge">
+            TreeFloatEdge restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractEdge">AbstractEdge</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 TreeFloatEdge">Attributes</h5>
+            <table class="level2 TreeFloatEdge">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>length</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#double"
+                                         rel="nofollow">
+                                        xs:double                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 TreeFloatEdge">Substructures</h5> 
+                <ul class="level2  TreeFloatEdge">
+            <li class="level2  TreeFloatEdge">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 TreeFloatEdge">Definition source</h5>
+<div class="level2 code TreeFloatEdge">
+    <pre class="level2 TreeFloatEdge">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeFloatEdge&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractEdge&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;length&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:double&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="TreeFloatRootEdge" class="dataType level1">
+    <a name="TreeFloatRootEdge"></a>TreeFloatRootEdge    </h4>
+
+<!-- description -->
+    <h5 class="level2 TreeFloatRootEdge">Description</h5>    
+    <p class="level2 TreeFloatRootEdge">
+                A concrete root edge implementation, with float length.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 TreeFloatRootEdge">Inheritance</h5>
+            <p class="level2 TreeFloatRootEdge">
+            TreeFloatRootEdge restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractRootEdge">AbstractRootEdge</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 TreeFloatRootEdge">Attributes</h5>
+            <table class="level2 TreeFloatRootEdge">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>length</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#double"
+                                         rel="nofollow">
+                                        xs:double                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 TreeFloatRootEdge">Substructures</h5> 
+                <ul class="level2  TreeFloatRootEdge">
+            <li class="level2  TreeFloatRootEdge">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 TreeFloatRootEdge">Definition source</h5>
+<div class="level2 code TreeFloatRootEdge">
+    <pre class="level2 TreeFloatRootEdge">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeFloatRootEdge&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractRootEdge&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;length&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:double&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="TreeIntEdge" class="dataType level1">
+    <a name="TreeIntEdge"></a>TreeIntEdge    </h4>
+
+<!-- description -->
+    <h5 class="level2 TreeIntEdge">Description</h5>    
+    <p class="level2 TreeIntEdge">
+                A concrete edge implementation, with int length.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 TreeIntEdge">Inheritance</h5>
+            <p class="level2 TreeIntEdge">
+            TreeIntEdge restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractEdge">AbstractEdge</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 TreeIntEdge">Attributes</h5>
+            <table class="level2 TreeIntEdge">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>length</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#integer"
+                                         rel="nofollow">
+                                        xs:integer                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 TreeIntEdge">Substructures</h5> 
+                <ul class="level2  TreeIntEdge">
+            <li class="level2  TreeIntEdge">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 TreeIntEdge">Definition source</h5>
+<div class="level2 code TreeIntEdge">
+    <pre class="level2 TreeIntEdge">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeIntEdge&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractEdge&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;length&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:integer&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="TreeIntRootEdge" class="dataType level1">
+    <a name="TreeIntRootEdge"></a>TreeIntRootEdge    </h4>
+
+<!-- description -->
+    <h5 class="level2 TreeIntRootEdge">Description</h5>    
+    <p class="level2 TreeIntRootEdge">
+                A concrete root edge implementation, with int length.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 TreeIntRootEdge">Inheritance</h5>
+            <p class="level2 TreeIntRootEdge">
+            TreeIntRootEdge restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractRootEdge">AbstractRootEdge</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 TreeIntRootEdge">Attributes</h5>
+            <table class="level2 TreeIntRootEdge">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>length</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#integer"
+                                         rel="nofollow">
+                                        xs:integer                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 TreeIntRootEdge">Substructures</h5> 
+                <ul class="level2  TreeIntRootEdge">
+            <li class="level2  TreeIntRootEdge">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 TreeIntRootEdge">Definition source</h5>
+<div class="level2 code TreeIntRootEdge">
+    <pre class="level2 TreeIntRootEdge">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeIntRootEdge&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractRootEdge&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;length&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:integer&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="TreeNode" class="dataType level1">
+    <a name="TreeNode"></a>TreeNode    </h4>
+
+<!-- description -->
+    <h5 class="level2 TreeNode">Description</h5>    
+    <p class="level2 TreeNode">
+                A concrete node implementation.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 TreeNode">Inheritance</h5>
+            <p class="level2 TreeNode">
+            TreeNode restricts                            <a href="/doc/schema-1/trees/abstracttrees/#AbstractNode">AbstractNode</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 TreeNode">Substructures</h5> 
+                <ul class="level2  TreeNode">
+            <li class="level2  TreeNode">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 TreeNode">Definition source</h5>
+<div class="level2 code TreeNode">
+    <pre class="level2 TreeNode">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;TreeNode&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractNode&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+    
+
+<!-- subroutine for depth-first recursion in substructure -->
+
+<h3 class="headerstyle"><a name="seeAlso"></a>See also</h3>
+
+    <p>
+        ~/nexml/xsd/trees/tree.xsd <a href="http://www.w3.org/TR/xmlschema-1/#compound-schema" 
+        title="About the xs:include element">includes</a> the following other files:
+    </p>    
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/trees/abstracttrees/">~/nexml/xsd/trees/abstracttrees.xsd</a></li>
+            </ul>
+
+    <p>
+        ~/nexml/xsd/trees/tree.xsd is included in:
+    </p>
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/trees/trees/">~/nexml/xsd/trees/trees.xsd</a></li>
+            </ul>
+<small class="credit">
+    This page summarizes the contents of schema file "~/nexml/xsd/trees/tree.xsd".
+    Generated on Sat Sep 20 23:48:16 2014.
+</small>      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

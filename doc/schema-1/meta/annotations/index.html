@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0 ~/nexml/xsd/meta/annotations.xsd</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0 ~/nexml/xsd/meta/annotations.xsd</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Schema module documentation</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1/meta/annotations/ -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                <a href="/doc/schema-1">schema-1</a> /
+                                                                                <a href="/doc/schema-1/meta">meta</a> /
+                                                                                annotations                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1/meta/annotations/">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1/meta/annotations/">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1/meta/annotations/">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1/meta/annotations/">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain">Description</h3><p><strong>Other views</strong> (open in new window):</p>
+<div class="credit linkshare">
+    <a href="inheritance/" target="nexml_inheritance">
+        <img 
+            class="icon" 
+            src="/img/chart_organisation.png" 
+            alt="organisation chart" /> inheritance tree
+    </a> |
+    <a href="inclusions/" target="nexml_inclusions">
+        <img 
+            class="icon" 
+            src="/img/sitemap.png" 
+            alt="file hierarchy" /> inclusions tree
+    </a> |    
+    <a href="/nexml/xsd/meta/annotations.xsd" target="nexml_source">
+        <img 
+            class="icon" 
+            src="/img/page_white_code_red.png" 
+            alt="xml schema code" /> schema source
+    </a>     
+</div>
+    <h3 class="headerstyle"><a name="complexTypes"></a>Complex types</h3>
+    
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="Base" class="dataType level1">
+    <a name="Base"></a>Base        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 Base">Description</h5>    
+    <p class="level2 Base">
+				The base type for all complexType definitions in the
+				nexml schema. This type allows a number of special
+				attributes:
+				xml:lang - for languages codes
+						xml:base - see
+						
+							http://www.w3.org/TR/xmlbase/
+						
+						xml:id - see
+						
+							http://www.w3.org/TR/xml-id/
+						xml:space - for whitespace handlingxlink:href - for links
+				Also see http://www.w3.org/2001/xml.xsd for more
+				information on the xml and xlink attributes.
+			</p>
+
+<!-- inheritance -->
+        
+        <!-- attributes -->
+                            <h5 class="level2 Base">Attributes</h5>
+            <table class="level2 Base">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>xml:base</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#anyURI"
+                                         rel="nofollow">
+                                        xs:anyURI                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 Base">Definition source</h5>
+<div class="level2 code Base">
+    <pre class="level2 Base">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;Base&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">ref</span><span class="xmlToken">=</span><span class="attrVal">&quot;xml:base&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:anyAttribute</span> <span class="attrName">namespace</span><span class="xmlToken">=</span><span class="attrVal">&quot;##any&quot;</span> <span class="attrName">processContents</span><span class="xmlToken">=</span><span class="attrVal">&quot;skip&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="LiteralMeta" class="dataType level1">
+    <a name="LiteralMeta"></a>LiteralMeta    </h4>
+
+<!-- description -->
+    <h5 class="level2 LiteralMeta">Description</h5>    
+    <p class="level2 LiteralMeta">
+				Metadata annotations in which the object is a literal value. If the @content attribute is used, 
+				then the element should contain no children.
+			</p>
+
+<!-- inheritance -->
+    <h5 class="level2 LiteralMeta">Inheritance</h5>
+            <p class="level2 LiteralMeta">
+            LiteralMeta extends                            <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 LiteralMeta">Attributes</h5>
+            <table class="level2 LiteralMeta">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>property</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#QName"
+                                         rel="nofollow">
+                                        xs:QName                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>datatype</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#QName"
+                                         rel="nofollow">
+                                        xs:QName                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                            <tr>
+                            <td>content</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#string"
+                                         rel="nofollow">
+                                        xs:string                                    </a>
+                                                            </td>
+                            <td></td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 LiteralMeta">Definition source</h5>
+<div class="level2 code LiteralMeta">
+    <pre class="level2 LiteralMeta">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;LiteralMeta&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:any</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;property&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:QName&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;datatype&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:QName&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;content&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:string&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="Meta" class="dataType level1">
+    <a name="Meta"></a>Meta        [abstract]
+    </h4>
+
+<!-- description -->
+
+<!-- inheritance -->
+    <h5 class="level2 Meta">Inheritance</h5>
+            <p class="level2 Meta">
+            Meta extends                            <a href="/doc/schema-1/meta/annotations/#Base">Base</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/meta/annotations/#LiteralMeta">LiteralMeta</a>,
+                    <a href="/doc/schema-1/meta/annotations/#ResourceMeta">ResourceMeta</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 Meta">Definition source</h5>
+<div class="level2 code Meta">
+    <pre class="level2 Meta">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Base&quot;</span><span class="xmlToken">&gt;</span> <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="ResourceMeta" class="dataType level1">
+    <a name="ResourceMeta"></a>ResourceMeta    </h4>
+
+<!-- description -->
+    <h5 class="level2 ResourceMeta">Description</h5>    
+    <p class="level2 ResourceMeta">
+				Metadata annotations in which the object is a resource. If this element contains meta elements 
+				as children, then the object of this annotation is a "blank node".
+			</p>
+
+<!-- inheritance -->
+    <h5 class="level2 ResourceMeta">Inheritance</h5>
+            <p class="level2 ResourceMeta">
+            ResourceMeta extends                            <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>.
+                            </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 ResourceMeta">Attributes</h5>
+            <table class="level2 ResourceMeta">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>href</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#ml:URI"
+                                         rel="nofollow">
+                                        xhtml:URI                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                            <tr>
+                            <td>rel</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#QName"
+                                         rel="nofollow">
+                                        xs:QName                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                            <h5 class="level2 ResourceMeta">Substructures</h5> 
+                <ul class="level2  ResourceMeta">
+            <li class="level2  ResourceMeta">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "meta", 
+                instance of <a href="/doc/schema-1/meta/annotations/#Meta">Meta</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 ResourceMeta">Definition source</h5>
+<div class="level2 code ResourceMeta">
+    <pre class="level2 ResourceMeta">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;ResourceMeta&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;meta&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;Meta&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;href&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xhtml:URI&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;rel&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:QName&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+    
+
+<!-- subroutine for depth-first recursion in substructure -->
+
+<h3 class="headerstyle"><a name="seeAlso"></a>See also</h3>
+
+
+    <p>
+        ~/nexml/xsd/meta/annotations.xsd is included in:
+    </p>
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/abstract/">~/nexml/xsd/abstract.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/nexml/">~/nexml/xsd/nexml.xsd</a></li>
+            </ul>
+<small class="credit">
+    This page summarizes the contents of schema file "~/nexml/xsd/meta/annotations.xsd".
+    Generated on Sat Sep 20 23:48:15 2014.
+</small>      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

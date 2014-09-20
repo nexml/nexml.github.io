@@ -1,0 +1,1436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <!-- site meta data -->  
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NeXML is a file format for encoding phyloinformatic data using XML." />
+        <meta name="keywords" content="NeXML, XML, NEXUS, phyloinformatics, phylogenetics, phylogenies, trees, dna, rna, nucleotide, standard, continuous, amino, acid, matrix, tree, network, data" />
+        <meta name="author" content="Rutger Vos" />
+        <meta name="robots" content="index,follow" />
+        <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
+        
+        <!-- RSS feeds -->
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="nexml-discuss mailing list - RSS 2.0"
+          href="http://mailbucket.org/nexml_discuss.xml"/>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="SourceForge project summary - RSS 2.0" 
+          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
+        <link
+          rel="alternate"
+          type="application/rss+xml" 
+          title="Wiki changes - RSS 2.0"
+          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
+    
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SVN revision history - RSS 2.0"
+          href=""/>        
+        
+        <title>nexml schema 1.0 ~/nexml/xsd/characters/abstractcharacters.xsd</title>  
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/schema.css" type="text/css" />
+        <style type="text/css">
+            <!--
+                            -->
+        </style>
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/schema.js"></script>
+                    <link rel="shortcut icon" href="/templates/favicon.ico" />
+            </head>
+    <body>
+    
+    <!-- This heading is only here for text browsers without css -->
+    <h1 class="hide">nexml schema 1.0 ~/nexml/xsd/characters/abstractcharacters.xsd</h1>
+    
+    <div id="thetop">
+      <a id="top" name="top"></a>
+      <p class="hide">
+        Skip to: 
+        <a href="#sitemenu" accesskey="2">Site menu</a> |
+        <a href="#maincontent" accesskey="3">Main content</a>
+      </p>
+    </div>
+    
+    <div id="container">
+      <div id="main">
+
+        <!-- main banner in the top-left -->
+        <div id="logo">       
+          <h1>
+            [<a href="/" accesskey="4">NeXML</a>]
+          </h1><span id="tagline">Rich phyloinformatic data</span>
+
+        </div>
+        
+        <!-- site blurb in the top-middle -->
+        <div id="intro">
+          <h2>
+            <a id="maincontent" name="maincontent"></a>
+            The future data exchange standard is here!
+          </h2>
+          <p>
+            NeXML is an exchange standard for representing 
+            phyloinformatic data &mdash; inspired by the commonly used 
+            NEXUS format, but more robust and easier to process.
+          </p>
+        </div>
+        <div class="clear"></div>    
+        
+        <!-- validate form -->   
+        <div id="validateDiv">
+            <form 
+                action="/nexml/phylows/validator" 
+                enctype="multipart/form-data" 
+                method="post" 
+                id="validateForm">
+                <fieldset id="validateFieldset">
+                    <legend class="hide">Process nexml data</legend>
+                    <select id="validateSelect">
+                    	<option value="/nexml/phylows/validator">validate</option>
+                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
+                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    </select>
+                    <input type="file" name="file" id="validateUpload"/>
+                    <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
+                </fieldset>
+            </form>          
+        </div>   
+        
+        <!-- main heading of this page -->
+        <h3 class="headerstyle">Schema module documentation</h3>
+        
+        	<!-- http://eupoa.local/doc/schema-1/characters/abstractcharacters/ -->
+                <div style="padding-bottom:1em;margin-top: 1em; margin-left: 10px;color: #888888">
+            <small>
+                                                            <a href="/">~</a> /
+                                                                                <a href="/doc">doc</a> /
+                                                                                <a href="/doc/schema-1">schema-1</a> /
+                                                                                <a href="/doc/schema-1/characters">characters</a> /
+                                                                                abstractcharacters                                                </small>
+        </div>
+                
+    <div class="linkshare credit">
+                    <a href="/doc/schema-1/schema.rss">
+                <img class="icon" src="/img/feed.png" alt="rss"/>
+            </a> |
+               <a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http://eupoa.local/doc/schema-1/characters/abstractcharacters/">
+            <img class="icon" src="/img/digg.gif" alt="digg"/>
+        </a> 
+        <a rel="nofollow" href="http://reddit.com/submit?url=http://eupoa.local/doc/schema-1/characters/abstractcharacters/">
+            <img class="icon" src="/img/reddit.gif" alt="reddit"/>
+        </a> 
+        <a rel="nofollow" href="http://del.icio.us/post?url=http://eupoa.local/doc/schema-1/characters/abstractcharacters/">
+            <img class="icon" src="/img/delicious.gif" alt="del.icio.us"/>
+        </a>   
+        <a rel="nofollow" href="http://www.facebook.com/share.php?u=http://eupoa.local/doc/schema-1/characters/abstractcharacters/">
+            <img class="icon" src="/img/facebook.gif" alt="facebook"/>
+        </a>
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone size="small" annotation="none"></g:plusone>
+		
+		<!-- Place this render call where appropriate -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+        <small> &mdash; Last updated: Sat Sep 20 23:46:49 IST 2014
+ </small>        
+    </div> 
+        
+                
+<h3 class="plain">Description</h3>
+    <p>
+            This module defines the abstract super-classes for the components
+            that go into character matrices. In nexml instance documents, the
+            &lt;characters> element structure forms the concrete instance of 
+            the complex types defined here. The concrete structure consists of
+            one &lt;format> structure that define allowed states,
+            their symbols and ambiguity mappings, and the matrix columns they
+            apply to. This is then followed by a &lt;matrix> element that
+            contains rows that either consist of granular cells with individual
+            states, or of compact sequences.
+        </p><p><strong>Other views</strong> (open in new window):</p>
+<div class="credit linkshare">
+    <a href="inheritance/" target="nexml_inheritance">
+        <img 
+            class="icon" 
+            src="/img/chart_organisation.png" 
+            alt="organisation chart" /> inheritance tree
+    </a> |
+    <a href="inclusions/" target="nexml_inclusions">
+        <img 
+            class="icon" 
+            src="/img/sitemap.png" 
+            alt="file hierarchy" /> inclusions tree
+    </a> |    
+    <a href="/nexml/xsd/characters/abstractcharacters.xsd" target="nexml_source">
+        <img 
+            class="icon" 
+            src="/img/page_white_code_red.png" 
+            alt="xml schema code" /> schema source
+    </a>     
+</div>
+    <h3 class="headerstyle"><a name="complexTypes"></a>Complex types</h3>
+    
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractBlock" class="dataType level1">
+    <a name="AbstractBlock"></a>AbstractBlock        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractBlock">Description</h5>    
+    <p class="level2 AbstractBlock">
+                The AbstractBlock is the superclass for blocks that contain
+                an element structure of type AbstractFormat.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractBlock">Inheritance</h5>
+            <p class="level2 AbstractBlock">
+            AbstractBlock extends                            <a href="/doc/schema-1/abstract/#TaxaLinked">TaxaLinked</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/abstractcharacters/#AbstractCells">AbstractCells</a>,
+                    <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqs">AbstractSeqs</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractBlock">Substructures</h5> 
+                <ul class="level2  AbstractBlock">
+            <li class="level2  AbstractBlock">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "format", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractFormat">AbstractFormat</a>            
+                (0..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractBlock">Definition source</h5>
+<div class="level2 code AbstractBlock">
+    <pre class="level2 AbstractBlock">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractBlock&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#CharacterStateDataMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;TaxaLinked&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;format&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractFormat&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractCells" class="dataType level1">
+    <a name="AbstractCells"></a>AbstractCells        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractCells">Description</h5>    
+    <p class="level2 AbstractCells"> 
+                The AbstractSeqBlock type is the superclass for character blocks that
+                consist of granular character state observations. 
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractCells">Inheritance</h5>
+            <p class="level2 AbstractCells">
+            AbstractCells extends                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractBlock">AbstractBlock</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousCells">ContinuousCells</a>,
+                    <a href="/doc/schema-1/characters/dna/#DnaCells">DnaCells</a>,
+                    <a href="/doc/schema-1/characters/protein/#ProteinCells">ProteinCells</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionCells">RestrictionCells</a>,
+                    <a href="/doc/schema-1/characters/rna/#RnaCells">RnaCells</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardCells">StandardCells</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractCells">Substructures</h5> 
+                <ul class="level2  AbstractCells">
+            <li class="level2  AbstractCells">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsMatrix">AbstractObsMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractCells">Definition source</h5>
+<div class="level2 code AbstractCells">
+    <pre class="level2 AbstractCells">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractCells&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractBlock&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractChar" class="dataType level1">
+    <a name="AbstractChar"></a>AbstractChar        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractChar">Description</h5>    
+    <p class="level2 AbstractChar"> 
+                The AbstractChar type is the superclass for a column definition, which may
+                have a "states" attribute that refers to an AbstractStates element, a codon attribute
+                of type CodonPosition and an id attribute that may be an actual id (e.g. for categorical
+                matrices where observations explicitly refer to a column definition) or an integer for
+                sequence matrices.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractChar">Inheritance</h5>
+            <p class="level2 AbstractChar">
+            AbstractChar extends                            <a href="/doc/schema-1/abstract/#IDTagged">IDTagged</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAChar">AAChar</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousChar">ContinuousChar</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAChar">DNAChar</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAChar">RNAChar</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionChar">RestrictionChar</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardChar">StandardChar</a>,
+                </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 AbstractChar">Attributes</h5>
+            <table class="level2 AbstractChar">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>tokens</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#MSTokenLength">
+                                        MSTokenLength                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                            <tr>
+                            <td>states</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                            <tr>
+                            <td>codon</td>
+                            <td>
+                                                                    <a href="/doc/schema-1/characters/abstractcharacters/#CodonPosition">
+                                        CodonPosition                                    </a>
+                                                            </td>
+                            <td>optional</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractChar">Definition source</h5>
+<div class="level2 code AbstractChar">
+    <pre class="level2 AbstractChar">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractChar&quot;</span> <span class="attrName">sawsdl:modelReference</span><span class="xmlToken">=</span><span class="attrVal">&quot;http://evolutionaryontology-dev.nescent.org/cdao.owl#Character&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;IDTagged&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;tokens&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;MSTokenLength&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;codon&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CodonPosition&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;optional&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractFormat" class="dataType level1">
+    <a name="AbstractFormat"></a>AbstractFormat        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractFormat">Description</h5>    
+    <p class="level2 AbstractFormat"> 
+                The AbstractFormat type is the superclass for the element
+                that defines the allowed characters and states in a matrix, and their ambiguity mapping.
+                It may enclose AbstractStates elements that define states and their mappings, and 
+                AbstractChar elements that specify which AbstractStates apply to which matrix columns.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractFormat">Inheritance</h5>
+            <p class="level2 AbstractFormat">
+            AbstractFormat extends                            <a href="/doc/schema-1/abstract/#Annotated">Annotated</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAFormat">AAFormat</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousFormat">ContinuousFormat</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAFormat">DNAFormat</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAFormat">RNAFormat</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionFormat">RestrictionFormat</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardFormat">StandardFormat</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractFormat">Substructures</h5> 
+                <ul class="level2  AbstractFormat">
+            <li class="level2  AbstractFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "states", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractStates">AbstractStates</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  AbstractFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "char", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractChar">AbstractChar</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  AbstractFormat">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CharSet">CharSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractFormat">Definition source</h5>
+<div class="level2 code AbstractFormat">
+    <pre class="level2 AbstractFormat">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractFormat&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Annotated&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;states&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractStates&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractChar&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CharSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractMapping" class="dataType level1">
+    <a name="AbstractMapping"></a>AbstractMapping        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractMapping">Description</h5>    
+    <p class="level2 AbstractMapping">
+                The AbstractMapping type is the superclass for an ambiguity mapping. In an instance
+                document, a subclass of this type will look like <member state="st1"/>, i.e.
+                an element called "member" with an attribute called "state" whose value is an
+                id reference that refers to an element that subclasses AbstractState. The purpose
+                of AbstractMapping is to specify which other states may be implied, e.g. a nucleotide
+                symbol "N" would have mappings to "A", "C", "G" and "T". 
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractMapping">Inheritance</h5>
+            <p class="level2 AbstractMapping">
+            AbstractMapping extends                            <a href="/doc/schema-1/meta/annotations/#Base">Base</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAMapping">AAMapping</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAMapping">DNAMapping</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAMapping">RNAMapping</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardMapping">StandardMapping</a>,
+                </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 AbstractMapping">Attributes</h5>
+            <table class="level2 AbstractMapping">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>state</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#IDREF"
+                                         rel="nofollow">
+                                        xs:IDREF                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractMapping">Definition source</h5>
+<div class="level2 code AbstractMapping">
+    <pre class="level2 AbstractMapping">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractMapping&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Base&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:IDREF&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractObs" class="dataType level1">
+    <a name="AbstractObs"></a>AbstractObs        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractObs">Description</h5>    
+    <p class="level2 AbstractObs"> 
+                The AbstractObs type is the superclass for single observations, i.e. cells
+                in a matrix. A concrete instance of AbstractObs has a "char" attribute that
+                refers to an explicitly defined character (e.g. in categorical matrices), and 
+                a "state" attribute that either holds a reference to an explicitly defined 
+                state, or a raw state value (a continuous value).  
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractObs">Inheritance</h5>
+            <p class="level2 AbstractObs">
+            AbstractObs extends                            <a href="/doc/schema-1/abstract/#Labelled">Labelled</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAObs">AAObs</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousObs">ContinuousObs</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAObs">DNAObs</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAObs">RNAObs</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionObs">RestrictionObs</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardObs">StandardObs</a>,
+                </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 AbstractObs">Attributes</h5>
+            <table class="level2 AbstractObs">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>char</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#anySimpleType"
+                                         rel="nofollow">
+                                        xs:anySimpleType                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                            <tr>
+                            <td>state</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#anySimpleType"
+                                         rel="nofollow">
+                                        xs:anySimpleType                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractObs">Definition source</h5>
+<div class="level2 code AbstractObs">
+    <pre class="level2 AbstractObs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObs&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Labelled&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;char&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:anySimpleType&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:anySimpleType&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractObsMatrix" class="dataType level1">
+    <a name="AbstractObsMatrix"></a>AbstractObsMatrix        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractObsMatrix">Description</h5>    
+    <p class="level2 AbstractObsMatrix">                
+                The AbstractObsMatrix super class is the abstract type for a
+                <matrix> element that contains rows which hold granular state observations.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractObsMatrix">Inheritance</h5>
+            <p class="level2 AbstractObsMatrix">
+            AbstractObsMatrix extends                            <a href="/doc/schema-1/abstract/#Annotated">Annotated</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAObsMatrix">AAObsMatrix</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousObsMatrix">ContinuousObsMatrix</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAObsMatrix">DNAObsMatrix</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAObsMatrix">RNAObsMatrix</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionObsMatrix">RestrictionObsMatrix</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardObsMatrix">StandardObsMatrix</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractObsMatrix">Substructures</h5> 
+                <ul class="level2  AbstractObsMatrix">
+            <li class="level2  AbstractObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObsRow">AbstractObsRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  AbstractObsMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractObsMatrix">Definition source</h5>
+<div class="level2 code AbstractObsMatrix">
+    <pre class="level2 AbstractObsMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Annotated&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractObsRow" class="dataType level1">
+    <a name="AbstractObsRow"></a>AbstractObsRow        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractObsRow">Description</h5>    
+    <p class="level2 AbstractObsRow"> 
+                The AbstractObsRow represents a single row in a matrix. The row
+                must refer to a previously declared otu element by its id attribute (and must have
+                an id itself, may have a label, and may have meta attachments). The row
+                contains multiple cell elements.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractObsRow">Inheritance</h5>
+            <p class="level2 AbstractObsRow">
+            AbstractObsRow extends                            <a href="/doc/schema-1/abstract/#TaxonLinked">TaxonLinked</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAMatrixObsRow">AAMatrixObsRow</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousMatrixObsRow">ContinuousMatrixObsRow</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAMatrixObsRow">DNAMatrixObsRow</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAMatrixObsRow">RNAMatrixObsRow</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionMatrixObsRow">RestrictionMatrixObsRow</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardMatrixObsRow">StandardMatrixObsRow</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractObsRow">Substructures</h5> 
+                <ul class="level2  AbstractObsRow">
+            <li class="level2  AbstractObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "cell", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractObs">AbstractObs</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  AbstractObsRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#CellSet">CellSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractObsRow">Definition source</h5>
+<div class="level2 code AbstractObsRow">
+    <pre class="level2 AbstractObsRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObsRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;TaxonLinked&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;cell&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractObs&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;CellSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractPolymorphicStateSet" class="dataType level1">
+    <a name="AbstractPolymorphicStateSet"></a>AbstractPolymorphicStateSet        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractPolymorphicStateSet">Description</h5>    
+    <p class="level2 AbstractPolymorphicStateSet"> 
+                The AbstractPolymorphicStateSet type is the super-class for a polymorphic state set definition.
+                The element has a required AbstractSymbol attribute that in restricted concrete
+                subclasses must be of a sensible type such as a single IUPAC character. It may
+                enclose zero or more AbstractMapping elements to resolve ambiguities.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractPolymorphicStateSet">Inheritance</h5>
+            <p class="level2 AbstractPolymorphicStateSet">
+            AbstractPolymorphicStateSet extends                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAPolymorphicStateSet">AAPolymorphicStateSet</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAPolymorphicStateSet">DNAPolymorphicStateSet</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAPolymorphicStateSet">RNAPolymorphicStateSet</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardPolymorphicStateSet">StandardPolymorphicStateSet</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractPolymorphicStateSet">Substructures</h5> 
+                <ul class="level2  AbstractPolymorphicStateSet">
+            <li class="level2  AbstractPolymorphicStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractPolymorphicStateSet">Definition source</h5>
+<div class="level2 code AbstractPolymorphicStateSet">
+    <pre class="level2 AbstractPolymorphicStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractPolymorphicStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractSeqMatrix" class="dataType level1">
+    <a name="AbstractSeqMatrix"></a>AbstractSeqMatrix        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractSeqMatrix">Description</h5>    
+    <p class="level2 AbstractSeqMatrix"> 
+                The AbstractSeqMatrix super class is the abstract type for a
+                <matrix> element that contains rows which hold raw character sequences. 
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractSeqMatrix">Inheritance</h5>
+            <p class="level2 AbstractSeqMatrix">
+            AbstractSeqMatrix extends                            <a href="/doc/schema-1/abstract/#Annotated">Annotated</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AASeqMatrix">AASeqMatrix</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousSeqMatrix">ContinuousSeqMatrix</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNASeqMatrix">DNASeqMatrix</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNASeqMatrix">RNASeqMatrix</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionSeqMatrix">RestrictionSeqMatrix</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardSeqMatrix">StandardSeqMatrix</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractSeqMatrix">Substructures</h5> 
+                <ul class="level2  AbstractSeqMatrix">
+            <li class="level2  AbstractSeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "row", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqRow">AbstractSeqRow</a>            
+                (1..unbounded).
+                                            </li>        
+            <li class="level2  AbstractSeqMatrix">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#RowSet">RowSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractSeqMatrix">Definition source</h5>
+<div class="level2 code AbstractSeqMatrix">
+    <pre class="level2 AbstractSeqMatrix">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqMatrix&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;Annotated&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;row&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqRow&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;RowSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractSeqRow" class="dataType level1">
+    <a name="AbstractSeqRow"></a>AbstractSeqRow        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractSeqRow">Description</h5>    
+    <p class="level2 AbstractSeqRow">
+                The AbstractSeqRow represents a single row in a matrix. The row
+                must refer to a previously declared otu element by its id attribute (and must have
+                an id itself, may have a label, and may have meta attachments). The row
+                contains a single seq element with raw character data.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractSeqRow">Inheritance</h5>
+            <p class="level2 AbstractSeqRow">
+            AbstractSeqRow extends                            <a href="/doc/schema-1/abstract/#TaxonLinked">TaxonLinked</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAMatrixSeqRow">AAMatrixSeqRow</a>,
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousMatrixSeqRow">ContinuousMatrixSeqRow</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAMatrixSeqRow">DNAMatrixSeqRow</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAMatrixSeqRow">RNAMatrixSeqRow</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionMatrixSeqRow">RestrictionMatrixSeqRow</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardMatrixSeqRow">StandardMatrixSeqRow</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractSeqRow">Substructures</h5> 
+                <ul class="level2  AbstractSeqRow">
+            <li class="level2  AbstractSeqRow">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "seq", 
+                instance of <a href="">xs:anySimpleType</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractSeqRow">Definition source</h5>
+<div class="level2 code AbstractSeqRow">
+    <pre class="level2 AbstractSeqRow">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqRow&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;TaxonLinked&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;seq&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:anySimpleType&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractSeqs" class="dataType level1">
+    <a name="AbstractSeqs"></a>AbstractSeqs        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractSeqs">Description</h5>    
+    <p class="level2 AbstractSeqs"> 
+                The AbstractSeqBlock type is the superclass for character blocks that
+                consist of raw character sequences.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractSeqs">Inheritance</h5>
+            <p class="level2 AbstractSeqs">
+            AbstractSeqs extends                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractBlock">AbstractBlock</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousSeqs">ContinuousSeqs</a>,
+                    <a href="/doc/schema-1/characters/dna/#DnaSeqs">DnaSeqs</a>,
+                    <a href="/doc/schema-1/characters/protein/#ProteinSeqs">ProteinSeqs</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionSeqs">RestrictionSeqs</a>,
+                    <a href="/doc/schema-1/characters/rna/#RnaSeqs">RnaSeqs</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardSeqs">StandardSeqs</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractSeqs">Substructures</h5> 
+                <ul class="level2  AbstractSeqs">
+            <li class="level2  AbstractSeqs">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "matrix", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractSeqMatrix">AbstractSeqMatrix</a>            
+                (1..1).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractSeqs">Definition source</h5>
+<div class="level2 code AbstractSeqs">
+    <pre class="level2 AbstractSeqs">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqs&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractBlock&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;matrix&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeqMatrix&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractState" class="dataType level1">
+    <a name="AbstractState"></a>AbstractState        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractState">Description</h5>    
+    <p class="level2 AbstractState"> 
+                The AbstractState type is the super-class for a state definition.
+                The element has a required symbol attribute that in restricted concrete
+                subclasses must be of a sensible type such as a single IUPAC character. It may
+                enclose zero or more AbstractMapping elements to resolve ambiguities.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractState">Inheritance</h5>
+            <p class="level2 AbstractState">
+            AbstractState extends                            <a href="/doc/schema-1/abstract/#IDTagged">IDTagged</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAState">AAState</a>,
+                    <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAState">DNAState</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAState">RNAState</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionState">RestrictionState</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardState">StandardState</a>,
+                </p>    
+        
+        <!-- attributes -->
+                            <h5 class="level2 AbstractState">Attributes</h5>
+            <table class="level2 AbstractState">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Type</td>                
+                        <td>Usage</td>                                    
+                    </tr>            
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>symbol</td>
+                            <td>
+                                                                    <a 
+                                        href="http://www.w3.org/TR/xmlschema-2/#anySimpleType"
+                                         rel="nofollow">
+                                        xs:anySimpleType                                    </a>
+                                                            </td>
+                            <td>required</td>
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- elementPatterns -->
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractState">Definition source</h5>
+<div class="level2 code AbstractState">
+    <pre class="level2 AbstractState">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractState&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;IDTagged&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span> <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:attribute</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;symbol&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:anySimpleType&quot;</span> <span class="attrName">use</span><span class="xmlToken">=</span><span class="attrVal">&quot;required&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractStates" class="dataType level1">
+    <a name="AbstractStates"></a>AbstractStates        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractStates">Description</h5>    
+    <p class="level2 AbstractStates">
+                A container for a set of AbstractState elements.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractStates">Inheritance</h5>
+            <p class="level2 AbstractStates">
+            AbstractStates extends                            <a href="/doc/schema-1/abstract/#IDTagged">IDTagged</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAStates">AAStates</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAStates">DNAStates</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAStates">RNAStates</a>,
+                    <a href="/doc/schema-1/characters/restriction/#RestrictionStates">RestrictionStates</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardStates">StandardStates</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractStates">Substructures</h5> 
+                <ul class="level2  AbstractStates">
+            <li class="level2  AbstractStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "state", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractState">AbstractState</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  AbstractStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "polymorphic_state_set", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet">AbstractPolymorphicStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  AbstractStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "uncertain_state_set", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractUncertainStateSet">AbstractUncertainStateSet</a>            
+                (0..unbounded).
+                                            </li>        
+            <li class="level2  AbstractStates">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "set", 
+                instance of <a href="/doc/schema-1/meta/sets/#StateSet">StateSet</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractStates">Definition source</h5>
+<div class="level2 code AbstractStates">
+    <pre class="level2 AbstractStates">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractStates&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;IDTagged&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;state&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractState&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;polymorphic_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractPolymorphicStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;uncertain_state_set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;set&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;StateSet&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+        
+        <!-- heading, description, inheritance -->
+        <!-- heading with link -->
+<h4 id="AbstractUncertainStateSet" class="dataType level1">
+    <a name="AbstractUncertainStateSet"></a>AbstractUncertainStateSet        [abstract]
+    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractUncertainStateSet">Description</h5>    
+    <p class="level2 AbstractUncertainStateSet"> 
+                The AbstractUncertainStateSet type is the super-class for an uncertain state set definition.
+                The element has a required AbstractSymbol attribute that in restricted concrete
+                subclasses must be of a sensible type such as a single IUPAC character. It may
+                enclose zero or more AbstractMapping elements to resolve ambiguities.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractUncertainStateSet">Inheritance</h5>
+            <p class="level2 AbstractUncertainStateSet">
+            AbstractUncertainStateSet extends                            <a href="/doc/schema-1/characters/abstractcharacters/#AbstractState">AbstractState</a>.
+                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAUncertainStateSet">AAUncertainStateSet</a>,
+                    <a href="/doc/schema-1/characters/abstractcharacters/#AbstractPolymorphicStateSet">AbstractPolymorphicStateSet</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAUncertainStateSet">DNAUncertainStateSet</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAUncertainStateSet">RNAUncertainStateSet</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardUncertainStateSet">StandardUncertainStateSet</a>,
+                </p>    
+        
+        <!-- attributes -->
+                        
+        <!-- elementPatterns -->
+                            <h5 class="level2 AbstractUncertainStateSet">Substructures</h5> 
+                <ul class="level2  AbstractUncertainStateSet">
+            <li class="level2  AbstractUncertainStateSet">
+                            an <acronym title="An element is one of those pointy things.">element</acronym> called "member", 
+                instance of <a href="/doc/schema-1/characters/abstractcharacters/#AbstractMapping">AbstractMapping</a>            
+                (0..unbounded).
+                                            </li>        
+        </ul>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractUncertainStateSet">Definition source</h5>
+<div class="level2 code AbstractUncertainStateSet">
+    <pre class="level2 AbstractUncertainStateSet">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:complexType</span> <span class="attrName">abstract</span><span class="xmlToken">=</span><span class="attrVal">&quot;true&quot;</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractUncertainStateSet&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:complexContent</span> <span class="attrName">mixed</span><span class="xmlToken">=</span><span class="attrVal">&quot;false&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:extension</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractState&quot;</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="eltName">xs:sequence</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">&gt;</span>
+          <span class="xmlToken">&lt;</span><span class="eltName">xs:element</span> <span class="attrName">maxOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;unbounded&quot;</span> <span class="attrName">minOccurs</span><span class="xmlToken">=</span><span class="attrVal">&quot;0&quot;</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;member&quot;</span> <span class="attrName">type</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractMapping&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+        <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:sequence</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:extension</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexContent</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:complexType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>
+    
+    <h3 class="headerstyle"><a name="simpleTypes"></a>Simple types</h3>
+    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="AbstractSeq" class="dataType level1">
+    <a name="AbstractSeq"></a>AbstractSeq    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractSeq">Description</h5>    
+    <p class="level2 AbstractSeq"> 
+                AbstractSeq is a simple type based on xs:string. Concrete subclasses
+                must restrict this type to something more sensible, such as a regular expression for
+                IUPAC single character symbols, or whitespace separated integers or doubles.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractSeq">Inheritance</h5>
+            <p class="level2 AbstractSeq">
+            AbstractSeq restricts                                                                <a href="http://www.w3.org/TR/xmlschema-2/#string" rel="nofollow">
+                    xs:string</a>.
+                                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AASeq">AASeq</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNASeq">DNASeq</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNASeq">RNASeq</a>,
+                </p>    
+        
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractSeq">Definition source</h5>
+<div class="level2 code AbstractSeq">
+    <pre class="level2 AbstractSeq">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSeq&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:string&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="AbstractSymbol" class="dataType level1">
+    <a name="AbstractSymbol"></a>AbstractSymbol    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractSymbol">Description</h5>    
+    <p class="level2 AbstractSymbol">
+                AbstractSymbol is a simple type, i.e. a string token. Concrete subclasses of character
+                blocks will restrict AbstractSymbol to something sensible such as a regular expression
+                of IUPAC symbols, a range of integer values, and so on.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractSymbol">Inheritance</h5>
+            <p class="level2 AbstractSymbol">
+            AbstractSymbol restricts                                                                <a href="http://www.w3.org/TR/xmlschema-2/#string" rel="nofollow">
+                    xs:string</a>.
+                                                In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/protein/#AAToken">AAToken</a>,
+                    <a href="/doc/schema-1/characters/dna/#DNAToken">DNAToken</a>,
+                    <a href="/doc/schema-1/characters/rna/#RNAToken">RNAToken</a>,
+                </p>    
+        
+                            <h5 class="level2 AbstractSymbol">Facets</h5>
+            <table class="level2 AbstractSymbol">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Value</td>                
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>whiteSpace</td>
+                            <td>preserve</td>                
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractSymbol">Definition source</h5>
+<div class="level2 code AbstractSymbol">
+    <pre class="level2 AbstractSymbol">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractSymbol&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:string&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:whiteSpace</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;preserve&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="AbstractTokenList" class="dataType level1">
+    <a name="AbstractTokenList"></a>AbstractTokenList    </h4>
+
+<!-- description -->
+    <h5 class="level2 AbstractTokenList">Description</h5>    
+    <p class="level2 AbstractTokenList">
+                AbstractTokenList is a simple type superclass for a compact character
+                data representations that consist of space-separated lists of tokens. 
+                Examples of this are continuous character data (where the compact 
+                representation is a list of space-separated floating point numbers) and
+                standard categorical data (which is represented as integers, which can be
+                > 9, and hence need to be space-separated).
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 AbstractTokenList">Inheritance</h5>
+            <p class="level2 AbstractTokenList">        
+            AbstractTokenList defines a new type by making a list of 
+                                                    <a href="http://www.w3.org/TR/xmlschema-2/#string" rel="nofollow">
+                    xs:string</a>
+                            type items.
+        </p>
+                    In turn, this type is inherited from by
+                    <a href="/doc/schema-1/characters/continuous/#ContinuousSeq">ContinuousSeq</a>,
+                    <a href="/doc/schema-1/characters/standard/#StandardSeq">StandardSeq</a>,
+                </p>    
+        
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 AbstractTokenList">Definition source</h5>
+<div class="level2 code AbstractTokenList">
+    <pre class="level2 AbstractTokenList">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;AbstractTokenList&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:list</span> <span class="attrName">itemType</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:string&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="CodonPosition" class="dataType level1">
+    <a name="CodonPosition"></a>CodonPosition    </h4>
+
+<!-- description -->
+    <h5 class="level2 CodonPosition">Description</h5>    
+    <p class="level2 CodonPosition">
+                The CodonPosition type is an integer with value 1, 2 or 3, used in DNA and RNA.
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 CodonPosition">Inheritance</h5>
+            <p class="level2 CodonPosition">
+            CodonPosition restricts                                                                <a href="http://www.w3.org/TR/xmlschema-2/#nonNegativeInteger" rel="nofollow">
+                    xs:nonNegativeInteger</a>.
+                                            </p>    
+        
+                            <h5 class="level2 CodonPosition">Facets</h5>
+            <table class="level2 CodonPosition">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Value</td>                
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                            <td>minInclusive</td>
+                            <td>1</td>                
+                        </tr>
+                                            <tr>
+                            <td>maxInclusive</td>
+                            <td>3</td>                
+                        </tr>
+                                    </tbody>
+            </table>
+                
+        <!-- prettified xml source -->
+        <h5 class="level2 CodonPosition">Definition source</h5>
+<div class="level2 code CodonPosition">
+    <pre class="level2 CodonPosition">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;CodonPosition&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:nonNegativeInteger&quot;</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:minInclusive</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;1&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+      <span class="xmlToken">&lt;</span><span class="eltName">xs:maxInclusive</span> <span class="attrName">value</span><span class="xmlToken">=</span><span class="attrVal">&quot;3&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:restriction</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+        
+        <!-- heading, description, inheritance --> 
+        <!-- heading with link -->
+<h4 id="MSTokenLength" class="dataType level1">
+    <a name="MSTokenLength"></a>MSTokenLength    </h4>
+
+<!-- description -->
+    <h5 class="level2 MSTokenLength">Description</h5>    
+    <p class="level2 MSTokenLength">
+                The MSTokenLength simple type is used to specify, per column, how many
+                tokens may occur in a multistate single observation matrix. For example,
+                in a matrix where every cell holds a vector of two continuous values
+                (say, mean and standard deviation of a measurement), the column definition
+                provides a hint to this effect, by setting the attribute tokens="2"
+            </p>
+
+<!-- inheritance -->
+    <h5 class="level2 MSTokenLength">Inheritance</h5>
+            <p class="level2 MSTokenLength">
+            MSTokenLength restricts                                                                <a href="http://www.w3.org/TR/xmlschema-2/#positiveInteger" rel="nofollow">
+                    xs:positiveInteger</a>.
+                                            </p>    
+        
+                        
+        <!-- prettified xml source -->
+        <h5 class="level2 MSTokenLength">Definition source</h5>
+<div class="level2 code MSTokenLength">
+    <pre class="level2 MSTokenLength">
+  <span class="xmlToken">&lt;</span><span class="eltName">xs:simpleType</span> <span class="attrName">name</span><span class="xmlToken">=</span><span class="attrVal">&quot;MSTokenLength&quot;</span><span class="xmlToken">&gt;</span>
+    <span class="xmlToken">&lt;</span><span class="eltName">xs:restriction</span> <span class="attrName">base</span><span class="xmlToken">=</span><span class="attrVal">&quot;xs:positiveInteger&quot;</span><span class="xmlToken">/</span><span class="xmlToken">&gt;</span>
+  <span class="xmlToken">&lt;</span><span class="xmlToken">/</span><span class="eltName">xs:simpleType</span><span class="xmlToken">&gt;</span></pre>
+</div>        <p class="internallink">[ <a href="#top">Back to top</a> ]</p>    
+    
+<!-- subroutine for depth-first recursion in substructure -->
+
+<h3 class="headerstyle"><a name="seeAlso"></a>See also</h3>
+
+    <p>
+        ~/nexml/xsd/characters/abstractcharacters.xsd <a href="http://www.w3.org/TR/xmlschema-1/#compound-schema" 
+        title="About the xs:include element">includes</a> the following other files:
+    </p>    
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/abstract/">~/nexml/xsd/abstract.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/meta/sets/">~/nexml/xsd/meta/sets.xsd</a></li>
+            </ul>
+
+    <p>
+        ~/nexml/xsd/characters/abstractcharacters.xsd is included in:
+    </p>
+    <ul>
+                    <li class="rss"><a href="/doc/schema-1/characters/continuous/">~/nexml/xsd/characters/continuous.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/characters/dna/">~/nexml/xsd/characters/dna.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/characters/protein/">~/nexml/xsd/characters/protein.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/characters/restriction/">~/nexml/xsd/characters/restriction.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/characters/rna/">~/nexml/xsd/characters/rna.xsd</a></li>
+                    <li class="rss"><a href="/doc/schema-1/characters/standard/">~/nexml/xsd/characters/standard.xsd</a></li>
+            </ul>
+<small class="credit">
+    This page summarizes the contents of schema file "~/nexml/xsd/characters/abstractcharacters.xsd".
+    Generated on Sat Sep 20 23:48:13 2014.
+</small>      </div>
+      
+      <div id="sidebar">
+      
+        <!-- top-right site navigation menu -->
+        <h2 class="quicklinks">
+          <a id="quicklinks" name="quicklinks"></a>Quick links:
+        </h2>
+          <a class="quicklink" href="/manual">Manual</a>
+          <a class="quicklink" href="/nexml/html/doc/schema-1/">Schema documentation</a>
+          <a class="quicklink" href="http://dx.doi.org/10.1093/sysbio/sys025">NeXML publication</a>
+          <a class="quicklink" href="/nexml/examples">Example files</a>  
+          <a class="quicklink" href="http://www.slideshare.net/rvosa/nexml-11158998">Slide show</a>      
+        <br />
+        <h2 class="sidelink menuheader">
+          <a name="sitemenu"></a>Libraries:
+        </h2>
+        
+        <a class="sidelink" href="/nexml/java/">Java</a> 
+        <span class="hide">|</span>
+        
+        <a class="sidelink" href="/nexml/python/">Python</a>
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/perl/">Perl</a> 
+        <span class="hide">|</span>
+        
+		<a class="sidelink" href="/nexml/cpp/">C++</a> 
+        <span class="hide">|</span>		
+        
+        <a class="sidelink" href="/nexml/javascript/">JavaScript</a> 
+        <span class="hide">|</span> 
+        
+        <a class="sidelink" href="/nexml/ruby/">Ruby</a> 
+        <span class="hide">|</span>
+           
+        
+        <a class="hide" href="#top" accesskey="1">Top of page</a>
+        
+        <!-- links at the bottom right -->
+        <h3>
+          External links
+        </h3>
+        <ul>        
+          <li class="external">
+          	<a href="https://github.com/nexml" rel="nofollow">nexml@github</a>
+          </li>
+          <li class="external">
+          	<a href="/manual">NeXML wiki</a>
+          </li>
+          <li class="external">
+          	<a href="http://www.evolutionaryontology.org/" rel="nofollow">CDAO</a>
+          </li>
+		  <li class="external">
+			<a href="http://evoinfo.nescent.org/PhyloWS" rel="nofollow">PhyloWS</a>
+		  </li>
+        </ul>
+      </div>
+      <div class="clear">
+        &nbsp;
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Site implementation and technology:
+        &copy; <a href="http://rutgervos.blogspot.com" class="credit">Rutger Vos</a>. 
+        Site design: &copy; <a href="http://andreasviklund.com/" class="credit">Andreas Viklund</a> 
+        of <a href="http://jokkmokk.biz/" title="ITUS Jokkmokk">Jokkmokk</a>.
+      </p>
+    </div>
+    <!--
+	    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	    </script>
+	    <script type="text/javascript">
+	    _uacct = "UA-3174308-1";
+	    urchinTracker();
+	    </script>  
+    -->  
+  </body>
+</html>

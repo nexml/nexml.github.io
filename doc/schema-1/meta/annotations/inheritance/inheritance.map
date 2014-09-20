@@ -1,0 +1,5 @@
+base referer
+rect /doc/schema-1/meta/annotations/#Base 243,5 315,53
+rect /doc/schema-1/meta/annotations/#Meta 243,101 315,149
+rect /doc/schema-1/meta/annotations/#LiteralMeta 153,197 263,245
+rect /doc/schema-1/meta/annotations/#ResourceMeta 286,197 415,245
