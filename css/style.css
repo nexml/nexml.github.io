@@ -275,6 +275,10 @@ img.app {
     padding-top: 20px
 }
 
+#validateDiv form {
+  display: none;
+}
+
 #validateFieldset, .infoBox {
     border: 3px solid #FF9E78;
     background-color: #FDDCCF;
