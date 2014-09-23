@@ -1,6 +1,6 @@
 /*
     this graphviz graph documents the nexml file inclusion tree
-    (with focus on /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/restriction.xsd). Graph generated on Sat Sep 20 23:48:14 2014    from template: $Id: dotinheritance.tmpl 221 2007-12-13 02:31:30Z rvos $    
+    (with focus on /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/restriction.xsd). Graph generated on Tue Sep 23 12:49:34 2014    from template: $Id: dotinheritance.tmpl 221 2007-12-13 02:31:30Z rvos $    
 */
 digraph inclusions {
     label="File inclusion tree";

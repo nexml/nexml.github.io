@@ -1,6 +1,6 @@
 /*
     this graphviz graph documents the nexml inheritance tree
-    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/protein.xsd upwards. Graph generated on Sat Sep 20 23:48:14 2014    from template: $Id$    
+    from /Users/priyam/nexml/nexml.github.io/nexml/xsd/characters/protein.xsd upwards. Graph generated on Tue Sep 23 12:49:34 2014    from template: $Id$    
 */
 digraph inheritance {
     label="Inheritance tree for complex types in ~/nexml/xsd/characters/protein.xsd";
