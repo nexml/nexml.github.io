@@ -100,7 +100,7 @@ my $vars = {
     'schema'      => $schema,
     'currentFile' => $currentFile,
     'baseFile'    => $baseFile,
-    'title'       => 'nexml schema 1.0',
+    'title'       => 'nexml schema 0.9',
     'mainHeading' => 'Overview',
     'currentURL'  => 'http://' . $hostname . $subtree,
     'currentDate' => my $time = localtime,
@@ -120,7 +120,7 @@ for my $currentFile ( $schema->files ) {
     
     # *.xsd file specific variables to be interpolated in template
     $vars->{'currentFile'} = $currentFile;
-    $vars->{'title'}       = "nexml schema 1.0 ~" . $paths->strip( $currentFile );
+    $vars->{'title'}       = "nexml schema 0.9 ~" . $paths->strip( $currentFile );
     $vars->{'mainHeading'} = "Schema module documentation";
     $vars->{'currentURL'}  = 'http://' . $hostname . $paths->transform( $currentFile );
     $vars->{'currentDate'} = my $time = localtime;
