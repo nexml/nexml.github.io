@@ -38,7 +38,7 @@ else {
 	$logger->debug("read file '$file', copied contents to '$filename'");
 	eval { 
 		my @cmd = make_java_cmd($filename);
-		$logger->info("executing java validator");		
+		$logger->info("executing java validator: @cmd");		
 		my $output = `@cmd &> validator.log`;
 		open my $fh, '<', 'validator.log' or die $!;
 		while(<$fh>) {
