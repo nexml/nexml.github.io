@@ -1,3 +1,5 @@
 AddHandler cgi-script .cgi .pl
-
 Options +ExecCGI
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.cgi [NC,L]
