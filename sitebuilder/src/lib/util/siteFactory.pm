@@ -10,7 +10,7 @@ sub new {
 		'hostname' => $VARIABLE_SERVER_NAME ? $ENV{'SERVER_NAME'} : 'www.nexml.org',
 		'prefix'   => $ENV{'DOCUMENT_ROOT'},
 		'subtree'  => $ENV{'REQUEST_URI'},
-		'include'  => catdir( $ENV{'DOCUMENT_ROOT'}, 'nexml' ),
+		'include'  => catdir( $ENV{'DOCUMENT_ROOT'} ),
 	);
 	my $class  = shift;
 	my %fields = ( %defaults, @_ );
