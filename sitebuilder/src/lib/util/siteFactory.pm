@@ -10,7 +10,7 @@ sub new {
 		'hostname' => $VARIABLE_SERVER_NAME ? $ENV{'SERVER_NAME'} : 'www.nexml.org',
 		'prefix'   => $ENV{'DOCUMENT_ROOT'},
 		'subtree'  => $ENV{'REQUEST_URI'},
-		'include'  => catdir( $ENV{'DOCUMENT_ROOT'}, 'nexml', 'templates' ),
+		'include'  => catdir( $ENV{'DOCUMENT_ROOT'}, 'nexml' ),
 	);
 	my $class  = shift;
 	my %fields = ( %defaults, @_ );
@@ -29,7 +29,7 @@ sub create_path_handler {
 sub create_plain_template {
 	my $self = shift;
 	my %template_defaults = (     
-		'INCLUDE_PATH' => $self->include,      # or list ref
+	    'INCLUDE_PATH' => $self->include,      # or list ref
 	    'POST_CHOMP'   => 1,                   # cleanup whitespace
 	    'START_TAG'    => '<%',
 	    'END_TAG'      => '%>',
