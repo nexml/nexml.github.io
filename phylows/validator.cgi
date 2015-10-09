@@ -1,11 +1,4 @@
 #!/usr/bin/perl
-# $Id: validator.cgi 1723 2011-12-25 18:05:27Z rvos $
-BEGIN {
-    use lib '../../perllib';	
-    use lib '../../perllib/arch';
-    use lib '../../bio-phylo/lib';
-    unshift @INC, '../site/lib';
-}
 use strict;
 use warnings;
 use Cwd;
@@ -102,7 +95,7 @@ my $vars = $fac->create_template_vars(
     'mainHeading' => $title,
     'logmessages' => \@logmessages,
     'lines'       => \@lines,
-    'styleSheets' => [ 'validator.css' ],
+    'styleSheets' => [ 'css/validator.css' ],
     'favicon'     => $paths->strip( $paths->include( $title =~ qr/FAIL/ ? 'cross.png' : 'tick.png' ) ),
 );
 
@@ -110,7 +103,7 @@ my $vars = $fac->create_template_vars(
 print header('text/html', $code); # response code (201 or 400) here as second arg
 
 # write results
-$template->process( 'validator.tmpl', $vars ) || die $template->error();
+$template->process( 'templates/validator.tmpl', $vars ) || die $template->error();
 
 =head1 SUBROUTINES
 
