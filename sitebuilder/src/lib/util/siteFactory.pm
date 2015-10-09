@@ -48,8 +48,8 @@ sub create_plain_template {
 sub create_site_template {
 	my $self = shift;
 	my %defaults = (
-		'PRE_PROCESS'  => 'header.tmpl',
-		'POST_PROCESS' => 'footer.tmpl',	
+		'PRE_PROCESS'  => 'templates/header.tmpl',
+		'POST_PROCESS' => 'templates/footer.tmpl',	
 	);
 	my %args = ( %defaults, @_ );
 	return $self->create_plain_template( %args );
