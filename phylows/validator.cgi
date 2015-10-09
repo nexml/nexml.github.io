@@ -146,8 +146,8 @@ output of an object implementing L<IO::Handle>.
 sub make_java_cmd {
 	my ( $xml, $base, $xsd, $ns ) = @_;
 	$ns   = 'http://www.nexml.org/2009' if not $ns;
-	$base = File::Spec->catdir( getcwd, 'downloads' ) if not $base;
-	$xsd  = File::Spec->catfile( getcwd, 'xsd', 'nexml.xsd' ) if not $xsd;
+	$base = File::Spec->catdir( getcwd, '../downloads' ) if not $base;
+	$xsd  = File::Spec->catfile( getcwd, '../xsd', 'nexml.xsd' ) if not $xsd;
 	$xml  = 'infile.xml' if not $xml;	
 	die if not -r $xml;
 	my @cmd = (
