@@ -1,15 +1,4 @@
 #!/usr/bin/perl
-# $Id$
-BEGIN {
-    use Config;
-    $ENV{ $Config{'ldlibpthname'} } = '../expat/lib';
-}
-BEGIN {
-    unshift @INC, '../perl/lib';   
-    unshift @INC, '../site/lib';
-    use lib '../../perllib';	
-    use lib '../../perllib/arch';    
-}
 use strict;
 use warnings;
 use CGI ':standard';
