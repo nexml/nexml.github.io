@@ -9,29 +9,7 @@
         <meta name="author" content="Rutger Vos" />
         <meta name="robots" content="index,follow" />
         <meta name="verify-v1" content="mYceuNu58e0c0TNJ/gJ2NO63bxeH1nu28sZ2rtzcLoM=" />
-        
-        <!-- RSS feeds -->
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="nexml-discuss mailing list - RSS 2.0"
-          href="http://mailbucket.org/nexml_discuss.xml"/>
-        <link 
-          rel="alternate" 
-          type="application/rss+xml" 
-          title="SourceForge project summary - RSS 2.0" 
-          href="http://sourceforge.net/export/rss2_projsummary.php?group_id=209571"/>
-        <link
-          rel="alternate"
-          type="application/rss+xml" 
-          title="Wiki changes - RSS 2.0"
-          href="https://www.nescent.org/wg/evoinfo/index.php?title=Future_Data_Exchange_Standard&amp;action=history&amp;feed=rss"/>
-    
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="SVN revision history - RSS 2.0"
-          href=""/>        
+     
         
         <title>nexml schema 0.9 ~/nexml/xsd/nexml.xsd</title>  
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
@@ -86,18 +64,18 @@
         <!-- validate form -->   
         <div id="validateDiv">
             <form 
-                action="/nexml/phylows/validator" 
+                action="/phylows/validator" 
                 enctype="multipart/form-data" 
                 method="post" 
                 id="validateForm">
                 <fieldset id="validateFieldset">
                     <legend class="hide">Process nexml data</legend>
                     <select id="validateSelect">
-                    	<option value="/nexml/phylows/validator">validate</option>
-                    	<option value="/nexml/phylows/nex2xml">nexus -> nexml</option>
-                    	<option value="/nexml/phylows/newick2xml">newick -> nexml</option>
-                    	<option value="/nexml/phylows/xml2json">nexml -> json</option>
-                    	<option value="/nexml/phylows/xml2rdf">nexml -> rdf</option>
+                    	<option value="/phylows/validator">validate</option>
+                    	<option value="/phylows/nex2xml">nexus -> nexml</option>
+                    	<option value="/phylows/newick2xml">newick -> nexml</option>
+                    	<option value="/phylows/xml2json">nexml -> json</option>
+                    	<option value="/phylows/xml2rdf">nexml -> rdf</option>
                     </select>
                     <input type="file" name="file" id="validateUpload"/>
                     <input type="button" onclick="submitForm()" id="validateSubmit" value="Submit"/>
