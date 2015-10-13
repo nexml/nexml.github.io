@@ -1,10 +1,4 @@
 #!/usr/bin/perl
-BEGIN {
-    use lib '../../perllib';	
-    use lib '../../perllib/arch';
-    use lib '../../bio-phylo/lib';
-    unshift @INC, '../site/lib';
-}
 use strict;
 use warnings;
 use CGI;
