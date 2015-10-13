@@ -1,15 +1,6 @@
 #!/usr/bin/perl
-BEGIN {
-    use CGI::Carp qw(fatalsToBrowser);
-}
-BEGIN {
-    use Config;
-    $ENV{ $Config{'ldlibpthname'} } = '../expat/lib';
-}
-BEGIN {
-    use lib '../../perllib';
-    use lib '../../perllib/arch';
-}
+use CGI::Carp qw(fatalsToBrowser);
+use Config;
 BEGIN {
     $ENV{'UBIO_KEYCODE'} = '286a57553cde107e0e44e67799332a995ba66c7a';
 }
