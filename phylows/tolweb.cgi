@@ -1,16 +1,6 @@
 #!/usr/bin/perl
-BEGIN {
-    use CGI::Carp qw(fatalsToBrowser);
-}
-BEGIN {
-    use Config;
-    $ENV{ $Config{'ldlibpthname'} } = '../expat/lib';
-}
-BEGIN {
-    use lib '../../perllib';
-    use lib '../../perllib/arch';
-}
-
+use CGI::Carp qw(fatalsToBrowser);
+use Config;
 use strict;
 use warnings;
 use CGI;
