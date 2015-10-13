@@ -1,11 +1,5 @@
 #!/usr/bin/perl
 use CGI::Carp 'fatalsToBrowser';
-BEGIN {
-    use lib '../../perllib';	
-    use lib '../../perllib/arch';
-    use lib '../../bio-phylo/lib';
-    unshift @INC, '../site/lib';
-}
 use util;
 use util::siteFactory;
 use strict;
