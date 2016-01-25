@@ -1,3 +1,6 @@
 [submodule "nexml"]
 	path = nexml
 	url = https://github.com/nexml/nexml.git
+[submodule "nexml.java"]
+	path = nexml.java
+	url = https://github.com/nexml/nexml.java.git
